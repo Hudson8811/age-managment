@@ -1,0 +1,3 @@
+mixin nav-btn(type, className)
+  button(class= (className ? className + ' ' : '') + 'nav-btn nav-btn--' + type, type="button", aria-label= type)
+    +icon(type)(width="16", height="28")

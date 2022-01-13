@@ -1,0 +1,37 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+$fs-main: 16px;
+$lh-main: 1.21875;
+
+/* шрифты */
+$mainFont: "Montserrat", sans-serif;
+
+/**/
+$transition: 0.3s ease;
+
+/* цвета */
+$white: #ffffff;
+
+$blue-11: #112f59;
+$blue-56: #5676a7;
+$blue-a7: #a7d6f8;
+
+$brown: #40201a;
+$dark-16: #161d2d;
+
+$textMainColor: $brown;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

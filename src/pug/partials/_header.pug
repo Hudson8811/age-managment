@@ -1,0 +1,15 @@
+header.header
+  .header__container.container 
+    .header__action
+      a.header__action-item(href="#")
+        +icon('phone')(width="24", height="24")
+      a.header__action-item(href="#")
+        +icon('mail')(width="24", height="24")
+    nav.header__menu.nav
+      ul.nav__list 
+        each item in MENU 
+          li.nav__item 
+            a.nav__link(href= item.url)= item.text 
+    a.header__btn.btn.btn--small(href="#") Записаться
+    button.header__toggle(type="button")
+      +icon('bar')(width="18", height="18")

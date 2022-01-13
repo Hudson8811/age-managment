@@ -1,0 +1,17 @@
+section.about-coach
+  .about-coach__container.container 
+    .about-coach__aside 
+      .about-coach__slider.swiper 
+        .swiper-wrapper
+          - let slidesCount = 4;
+          while slidesCount--
+            .swiper-slide 
+              img(src="images/certificate.jpg", width="490", height="320", alt="Сертификат школы health-коучинга")
+        .about-coach__slider-nav
+          +nav-btn('prev', '')
+          +nav-btn('next', '')
+        .about-coach__pagination.pagination
+    .about-couch__main 
+      h2.about-coach__title.title.title--line О коуче
+      .about-coach__subtitle Специализация
+      .about-coach__text Здесь написать про специлизацию про коуча, и так далее усилия врача, диетолога, нутрициолога и фитнес-тренера. Я научу Вас понимать показатели своего здоровья, принципы и навыки здорового образа жизни и предупреждения болезни, помогу сформировать

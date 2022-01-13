@@ -1,0 +1,14 @@
+section.application
+  .application__container.container 
+    h2.application__title.title Запишитесь на первую бесплатную консультацию
+
+    .application__form 
+      .application__form-title Пришло время действовать!
+      .application__form-text Оставьте заявку, мой ассистент свяжется с Вами в течение 30 минут
+
+      form(action="#", method="post")
+        each item in FORM_FIELDS
+          label.application__form-field.field
+            span.field__hint!= item.hint
+            input(type= item.type, name= item.name, placeholder= item.placeholder)
+        button.application__form-send(type="submit") Отправить

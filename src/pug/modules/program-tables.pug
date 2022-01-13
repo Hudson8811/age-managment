@@ -1,0 +1,32 @@
+section.program-tables
+  .program-tables__container.container 
+    h2.program-tables__title.title Программы
+
+    .program-tables__tabs.tabs.swiper
+      .swiper-wrapper
+        each item, index in PROGRAM_TABLES_TABS
+          button.tabs__item.btn.btn--round(class= (index === 0 ? 'btn--active' : ''), type="button", data-target= item.target)!= item.text
+    .program-tables__main
+      +nav-btn('prev', 'program-tables__prev')
+      each item, index in PROGRAM_TABLES
+        .program-tables__table.table(class= (index === 0 ? 'program-tables__table--active' : ''), id="table-" + item.id)
+          .table__head
+            each headSimpleCell in item.head.simple
+              .table__head-cell!= headSimpleCell
+
+            each headCompositeCell in item.head.composite
+              .table__head-cell.table__head-cell--composite
+                .table__head-cell-hint!= headCompositeCell.title
+                each headCompositeCellPart in headCompositeCell.list
+                  .table__head-cell-part!= headCompositeCellPart
+          
+          .table__body.swiper 
+            .swiper-wrapper
+              each item in PROGRAM_TABLES_ROWS_OFFLINE
+                .table__row.swiper-slide
+                  each cell in item 
+                    .table__cell!= cell
+            .swiper-pagination
+      +nav-btn('next', 'program-tables__next')
+      .program-tables__pagination.pagination.pagination--white
+        button.pagination__dot(type="button", data-target="1") 1

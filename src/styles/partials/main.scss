@@ -1,0 +1,16 @@
+html {
+  font-size: $fs-main;
+  line-height: $lh-main;
+}
+
+body {
+  font-family: $mainFont;
+  color: $textMainColor;
+}
+
+.container {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

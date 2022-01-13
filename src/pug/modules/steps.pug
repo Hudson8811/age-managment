@@ -1,0 +1,11 @@
+section.steps
+  .steps__container.container 
+    h2.steps__title.title.title--white Этапы совместной работы
+    .steps__slider.swiper 
+      .swiper-wrapper
+        each item in STEPS
+          .steps__step.swiper-slide
+            h3.steps__step-title!= item.title
+            .steps__step-text!= item.text 
+    .steps__image
+      img(src="images/steps-img.jpg", srcset="images/steps-img@2x.jpg 2x", width="822", height="822", alt="Яхницкий Георгий Георгевич")

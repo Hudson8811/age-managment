@@ -1,0 +1,41 @@
+footer.footer
+  .footer__container.container
+    .footer__nav 
+      each item in FOOTER_MENU
+        .footer__menu
+          .footer__menu-title!= item.title 
+          ul 
+            each li in item.list 
+              li 
+                a(href= li.url)!= li.text 
+    .footer__contacts
+      .footer__contacts-item
+        .footer__contacts-item-icon 
+          +icon('phone')(width="21", height="21")
+        a(href="tel:+375292313432") +375 29 231 34 32
+      .footer__contacts-item
+        .footer__contacts-item-icon 
+          +icon('mail')(width="21", height="21")
+        a(href="mailto:sonovamar@company.com") sonovamar@company.com
+      .footer__contacts-item
+        .footer__contacts-item-icon 
+          +icon('pin')(width="21" height="28")
+        address Пр. Независимости, 56
+    .footer__download-app 
+      a(href="#")
+        img(src="images/google-play.svg", width="135", height="40", alt="Скачать приложение в google play market")
+      a(href="#")
+        img(src="images/app-store.svg", width="120", height="40", alt="Скачать приложение в app store")
+
+    ul.footer__social.social
+      each item in SOCIAL
+        li.social__item
+          a(href= item.url, target="_blank")
+            span.visully-hidden= item.text
+            +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+    
+    .footer__line 
+      .footer__copyright 2021. Agemanagment. Все права зарегестрированы
+      a.footer__policy(href="#") Политика конфеденциальности
+    
+    .footer__notice Все материалы размещенные на сайте охраняются авторским правом. Использование информации, размещенной на сайте, в том числе копирование, распространение, передача третьим лицам, опубликование или иные действиябез письменного согласия не допускаются. Деятельность компании осуществялется на ...Осуществление платежных операций обеспечивает компания....

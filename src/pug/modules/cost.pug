@@ -1,0 +1,11 @@
+section.cost 
+  .cost__container.container 
+    h2.cost__title.title Стоимость и условия оплаты
+
+    .cost__slider.swiper 
+      .swiper-wrapper
+        each item in COST_CARDS
+          .cost__card.cost-card.swiper-slide
+            .cost-card__icon
+              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+            .cost-card__text!= item.text

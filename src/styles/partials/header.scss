@@ -1,0 +1,22 @@
+.header {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__action {
+    display: flex;
+    margin-right: auto;
+
+    &-item {
+      svg {
+        display: block;
+        fill: $dark-16;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+  }
+}

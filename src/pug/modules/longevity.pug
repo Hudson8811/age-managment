@@ -1,0 +1,28 @@
+section.longevity
+  .longevity__container.container 
+    h2.longevity__title.title Счастливое долголетие
+    .longevity__formula Формула Счастья: 6 «С» "С": <br>Солнце - Сон - Смех - Спорт - Секс - Социализация*.
+
+    .longevity__scheme
+      .longevity__scheme-aside.longevity__scheme-aside--happiness
+        .longevity__scheme-aside-title Счастье
+        .longevity__scheme-aside-arrow
+          +icon('long-arrow')(width="8", height="696")
+        .longevity__scheme-aside-text Распределение усилий
+      .longevity__scheme-item
+        ul.longevity__scheme-item-list
+          each item in LONGEVITY_SCHEME_LIST_1
+            li!= item
+        .longevity__scheme-item-title Что должно <span>быть для счастья?</span>
+      .longevity__scheme-item
+        ul.longevity__scheme-item-list
+          each item in LONGEVITY_SCHEME_LIST_1
+            li!= item
+        .longevity__scheme-item-title Что нужно <span>делать для счастья?</span>
+      .longevity__scheme-aside.longevity__scheme-aside--duration
+        .longevity__scheme-aside-title Продолжительность счастья
+        .longevity__scheme-aside-arrow
+          +icon('long-arrow')(width="8", height="696")
+        .longevity__scheme-aside-text Застраты времени
+
+    .longevity__footnote * по определению Клиники профессора Калинченко.
