@@ -1,2 +1,214 @@
 .hero {
+  position: relative;
+  padding: 70px 0 120px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  background-image: linear-gradient(
+    to bottom,
+    $brown 95.85798816568047%,
+    transparent 95.85798816568047%
+  );
+
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background-color: rgba($brown, 0.72);
+  }
+
+  &::before {
+    left: 0;
+    transform-origin: 0 100%;
+    transform: rotate(-1.25deg);
+  }
+
+  &::after {
+    right: 0;
+    transform-origin: 100% 100%;
+    transform: rotate(1.25deg);
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__main {
+    width: 69.35483870967742%;
+    padding-left: 75px;
+    border-left: solid 1px $white;
+
+    &-questions {
+      max-width: 525px;
+      margin-bottom: 31px;
+    }
+
+    &-question {
+      position: relative;
+      padding: 0 26% 11px 0;
+      font-size: 16px;
+      line-height: 1.21875;
+      color: $white;
+
+      & + & {
+        margin-top: 11px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(
+          to left,
+          transparent 0%,
+          rgba($grey-aa, 0.25) 95.31%,
+          transparent 100%
+        );
+      }
+    }
+
+    &-info {
+    }
+
+    &-title {
+      max-width: 530px;
+      margin: 0 0 25px;
+      font-size: 32px;
+      line-height: 39px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    &-name {
+      display: flex;
+      max-width: 340px;
+      margin-bottom: 37px;
+
+      &-icon {
+        width: 58px;
+        margin-right: 27px;
+        flex-shrink: 0;
+        align-self: center;
+      }
+
+      &-text {
+        font-size: 26px;
+        color: $white;
+        align-self: center;
+      }
+    }
+
+    &-skills {
+      display: flex;
+      margin-bottom: 25px;
+
+      &-title {
+        max-width: 236px;
+        font-size: 16px;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        flex-shrink: 0;
+        order: -1;
+        align-self: center;
+      }
+
+      &-list {
+        margin-right: -2px;
+        font-size: 14px;
+        line-height: 1.219285714285714;
+        color: $white;
+        font-weight: 600;
+        align-self: center;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        margin: 0 15px;
+        background-color: $white;
+        flex-shrink: 0;
+      }
+    }
+
+    &-btn {
+      display: block;
+      width: 100%;
+      max-width: 547px;
+      padding: 18px 20px;
+      font-size: 20px;
+      line-height: 1;
+      color: $blue-11;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      background-color: rgba($white, 0.56);
+
+      transition: background-color $transition;
+
+      @include hover {
+        background-color: $white;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 580px;
+    height: 580px;
+    margin-bottom: -45px;
+    padding: 10px;
+    border: solid 3px rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-self: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: solid 10px $brown;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 111.2%;
+      height: 111.2%;
+      border: solid 1px rgba($white, 0.11);
+      border-radius: 50%;
+    }
+  }
 }

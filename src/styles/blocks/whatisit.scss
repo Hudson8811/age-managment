@@ -1,0 +1,113 @@
+.whatisit {
+  padding: 74px 0 60px;
+
+  &__container {
+    display: flex;
+    max-width: 1406px;
+  }
+
+  &__aside {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 690px;
+
+    &-image {
+      width: 562px;
+      margin-left: -10px;
+      flex-shrink: 0;
+      align-self: flex-start;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: 0;
+      right: 11px;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      width: 180px;
+
+      &::after {
+        content: "";
+        width: 1px;
+        margin-top: 27px;
+        margin-left: auto;
+        flex-grow: 1;
+        background-color: $brown;
+      }
+
+      span {
+        margin-right: -6px;
+        font-size: 16px;
+        line-height: 1.25;
+        font-weight: 700;
+        text-align: right;
+      }
+
+      &-play {
+        position: relative;
+        top: 127px;
+        left: 30px;
+        display: block;
+        width: 49px;
+        margin-left: auto;
+        margin-bottom: -57px;
+
+        svg {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 540px;
+    margin-left: 75px;
+
+    &-title {
+      margin-bottom: 33px;
+    }
+
+    &-subtitle {
+      max-width: 300px;
+      margin-bottom: 33px;
+      font-size: 36px;
+      line-height: 1.268888888888889;
+      color: $blue-11;
+      font-weight: 700;
+    }
+
+    &-text {
+      max-width: 520px;
+      margin-bottom: 29px;
+      font-size: 18px;
+      line-height: 1.288888888888889;
+      color: $blue-11;
+
+      p {
+        margin: 0;
+      }
+
+      p + p {
+        margin-top: 22px;
+      }
+
+      b {
+      }
+    }
+
+    &-btn {
+    }
+  }
+}

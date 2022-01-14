@@ -1,4 +1,10 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 15px 0;
+  background-color: $white;
+
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -7,13 +13,35 @@
   &__action {
     display: flex;
     margin-right: auto;
+    align-self: center;
 
     &-item {
+      align-self: center;
+
+      & + & {
+        margin-left: 24px;
+      }
+
       svg {
         display: block;
+
         fill: $dark-16;
       }
     }
+  }
+
+  &__menu {
+    display: flex;
+    align-self: center;
+  }
+
+  &__nav {
+    align-self: center;
+  }
+
+  &__btn {
+    margin-left: 40px;
+    align-self: center;
   }
 
   &__toggle {

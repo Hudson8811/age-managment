@@ -7,6 +7,7 @@
 @import "base/mixin";
 
 /*libs*/
+@import "vendor/swiper";
 
 /* ui */
 @import "ui/ui";
@@ -15,10 +16,16 @@
 @import "partials/main";
 
 /* components */
+@import "blocks/title";
 @import "blocks/nav";
+@import "blocks/wishmap-result-item";
+@import "blocks/wishmap-item";
 
 @import "blocks/hero";
+@import "blocks/but";
+@import "blocks/whatisit";
 @import "blocks/wishmap";
+@import "blocks/longevity";
 
 @import "partials/header";
 @import "partials/footer";

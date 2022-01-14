@@ -1,0 +1,24 @@
+.wishmap-item {
+  position: relative;
+  padding-top: 104px;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.21875;
+    color: $white;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.289285714285714;
+    color: $white;
+  }
+}

@@ -1,28 +1,34 @@
 section.wishmap
   .wishmap__container.container
-    .wishmap__main
-      h2.wishmap__main-title.title.title--line.title--white Карта желаний
-      .wishmap__main-subtitle Чему я научусь
-      .wishmap__main-text Преимущество коучинга управления возрастом в том, что Вы сами научитесь и отработаете навыки выявления и коррекции состояний, ускоряющих старение
-    .wishmap__slider.swiper 
-      .swiper-wrapper
-        - let i = 8;
-        while i--
-          .wishmap__slider-item.swiper-slide
-            .wishmap__slider-item-title Научитесь определять ранние признаки инсулинорезистентности
-            .wishmap__slider-item-text Выявление инсулинорезистентности может предотвратить развитие сахарного диабета 2го типа. Вы узнаете, на какие показатели крови нужно обращать внимание для раннего выявления проблемы
-      .wishmap__slider-controls
-        +nav-btn('prev', '')
-        .wishmap__slider-controls.pagination.pagination--white
-          //-button.pagination__dot(type="button", data-target="1") 1
-        +nav-btn('next', '')
-    .wishmap__scheme
-      .wishmap__scheme-text Что Вы получите в результате?
-      each item in WISHMAP_RESULT_ITEMS
-        .wishmap__scheme-item.wishmap-result-item
-          .wishmap-result-item__icon
-            +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
-          .wishmap-result-item__text!= item.text
+    .wishmap__grid
+      .wishmap__main
+        h2.wishmap__main-title.title.title--line.title--line-white 
+          span Карта желаний
+        .wishmap__main-subtitle Чему я научусь
+        .wishmap__main-text Преимущество коучинга управления возрастом в том, что Вы сами научитесь и отработаете навыки выявления и коррекции состояний, ускоряющих старение
+      .wishmap__slider
+        .swiper 
+          .swiper-wrapper
+            - let i = 8;
+            while i--
+              .wishmap__slider-item.swiper-slide
+                .wishmap__slider-item-title Научитесь определять ранние признаки инсулинорезистентности
+                .wishmap__slider-item-text Выявление инсулинорезистентности может предотвратить развитие сахарного диабета 2го типа. Вы узнаете, на какие показатели крови нужно обращать внимание для раннего выявления проблемы
+          .wishmap__slider-controls
+            +nav-btn('prev', '')
+            .wishmap__slider-controls.pagination.pagination--white
+              //-button.pagination__dot(type="button", data-target="1") 1
+            +nav-btn('next', '')
+      
+      .wishmap__scheme
+        .wishmap__scheme-text Что Вы получите в&nbsp;результате?
+        each item, index in WISHMAP_RESULT_ITEMS
+          - const actClass = index === 0 ? ' active' : '';
+          div(class="wishmap__scheme-item wishmap__scheme-item--" + item.mod + actClass + " wishmap-result-item")
+            .wishmap-result-item__icon
+              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+            .wishmap-result-item__text!= item.text
+    
     .wishmap__list.swiper 
       .swiper-wrapper 
         each item in WISHMAP_ITEMS

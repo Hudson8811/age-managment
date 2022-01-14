@@ -1,0 +1,21 @@
+.wishmap-result-item {
+  width: 191px;
+
+  &__icon {
+    height: 44px;
+    margin-bottom: 16px;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.219285714285714;
+    color: $white;
+    font-weight: 600;
+    text-align: center;
+  }
+}
