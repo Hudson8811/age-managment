@@ -1,0 +1,34 @@
+.program-tables {
+  padding: 58px 0 0;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 37px;
+  }
+
+  &__tabs {
+    margin-bottom: 34px;
+  }
+
+  &__main {
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    display: none;
+  }
+
+  &__prev {
+  }
+  &__next {
+  }
+
+  &__pagination {
+  }
+
+  &__table {
+  }
+}

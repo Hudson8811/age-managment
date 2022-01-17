@@ -1,0 +1,29 @@
+.application {
+  padding: 140px 0 72px;
+
+  &__container {
+  }
+
+  &__title {
+    max-width: 730px;
+    margin: 0 auto 70px;
+  }
+
+  &__form {
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      width: 894px;
+      height: 560px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='894' height='560' viewBox='0 0 894 560' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='647.5' y='.5' width='99' height='99' rx='49.5' stroke='%23112F59'/%3e%3cpath d='M720.335 365.75c.962-1.667 3.368-1.667 4.33 0l40.487 70.125L805.638 506c.963 1.667-.24 3.75-2.165 3.75H641.527c-1.925 0-3.128-2.083-2.165-3.75l40.486-70.125 40.487-70.125Z' stroke='%23112F59'/%3e%3crect x='26.5' y='164.5' width='196' height='196' rx='4.5' stroke='%23112F59'/%3e%3crect x='.5' y='334.5' width='50' height='50' rx='4.5' stroke='%23112F59'/%3e%3crect x='853.305' y='211.707' width='56' height='56' rx='4.5' transform='rotate(45 853.305 211.707)' stroke='%23112F59'/%3e%3c/svg%3e");
+    }
+  }
+}

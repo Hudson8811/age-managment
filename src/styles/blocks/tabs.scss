@@ -1,0 +1,12 @@
+.tabs {
+  overflow: visible;
+
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 10px;
+  }
+}

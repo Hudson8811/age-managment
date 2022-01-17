@@ -1,0 +1,89 @@
+.slogan {
+  position: relative;
+  z-index: 0;
+  padding: 288px 0 301px;
+  background-color: $blue-11;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 51%;
+    pointer-events: none;
+    background-color: $white;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1680' height='1102' viewBox='0 0 1680 1102' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='.28' d='m0 55 1680 106.802V892L0 372.657V55Z' fill='%23112F59'/%3e%3cpath opacity='.28' d='m-88 0 1849 124.562V879L-72.504 342.416-88 0Z' fill='%23112F59'/%3e%3cpath opacity='.28' d='M1761 1022.19-73 1102V237l1834 536.716v248.474Z' fill='%23112F59'/%3e%3cpath opacity='.28' d='m1702 1085-1888-64.66L.45 171l1679.56 519.6L1702 1085Z' fill='%23112F59'/%3e%3cpath d='M0 77.182 1680 23v959.665L0 1052V77.182Z' fill='%23112F59'/%3e%3c/svg%3e");
+  }
+
+  &::before {
+    top: 0;
+    background-position: 0 0;
+  }
+
+  &::after {
+    bottom: 0;
+    background-position: left 0 bottom 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 540px;
+    margin-right: 40px;
+
+    &-title {
+      margin: 0 0 35px;
+      font-size: 36px;
+      line-height: 1.268888888888889;
+      color: $white;
+      font-weight: 700;
+
+      span {
+        display: block;
+        color: $blue-a7;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 1.268888888888889;
+      color: $white;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 598px;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &-caption {
+      position: absolute;
+      right: 0;
+      bottom: -22px;
+      max-width: 490px;
+      padding: 16px 16px 8px 32px;
+      font-size: 16px;
+      line-height: 1.21875;
+      color: $white;
+      font-weight: 700;
+      text-align: right;
+      border-top-left-radius: 16px;
+      background-color: $blue-11;
+    }
+  }
+}

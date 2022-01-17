@@ -11,15 +11,16 @@
 
   border-radius: 10px;
   border: solid 1px $blue-11;
+  background-color: transparent;
 
   cursor: pointer;
   appearance: none;
 
-  transition: border-color $transition, color $transition;
+  transition: background-color $transition, color $transition;
 
   @include hover {
-    border-color: $blue-56;
-    color: $blue-56;
+    color: $white;
+    background-color: $blue-11;
   }
 
   &:active {
@@ -30,5 +31,17 @@
     padding: 9px 16px 10px;
     font-size: 14px;
     border-radius: 5px;
+  }
+
+  &--round {
+    padding: 16px 16px 17px;
+    font-size: 12px;
+    border-radius: 24px;
+  }
+
+  &--active {
+    color: $white;
+    background-color: $blue-11;
+    pointer-events: none;
   }
 }

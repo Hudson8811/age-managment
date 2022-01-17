@@ -1,0 +1,25 @@
+.cost {
+  padding-bottom: 58px;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__slider {
+    .swiper-slider {
+      flex-wrap: wrap;
+      margin-top: -13px;
+      margin-left: -13px;
+    }
+  }
+
+  &__card {
+    width: calc((100% / 6) - 13px);
+    height: auto;
+    margin-left: 13px;
+    margin-top: 13px;
+  }
+}

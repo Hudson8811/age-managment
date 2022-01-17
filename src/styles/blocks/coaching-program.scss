@@ -1,0 +1,61 @@
+.coaching-program {
+  position: relative;
+  padding: 32px 32px 44px;
+  border-radius: 16px;
+  background-color: $brown;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-16px) translateX(-21px);
+    width: 67px;
+    height: 67px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: $brown;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    &::before {
+      width: 87px;
+      height: 87px;
+      border: solid 1px rgba($white, 0.33);
+    }
+
+    &::after {
+      width: 119px;
+      height: 119px;
+      border: solid 1px rgba($white, 0.09);
+    }
+  }
+
+  &__result {
+    font-size: 48px;
+    line-height: 1.218958333333333;
+    color: rgba($white, 0.85);
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 1.219047619047619;
+    color: rgba($white, 0.85);
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.coaching-programs + .steps {
+  margin-top: -438px;
+}

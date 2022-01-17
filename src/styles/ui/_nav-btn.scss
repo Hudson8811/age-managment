@@ -1,0 +1,61 @@
+.nav-btn {
+  $self: &;
+
+  display: flex;
+  justify-content: center;
+
+  width: 51px;
+  height: 51px;
+  margin: 0;
+  padding: 0;
+
+  border-radius: 50%;
+  border: solid 4px rgba($brown, 0.6);
+  background-color: transparent;
+  transition: border-color $transition;
+
+  appearance: none;
+  cursor: pointer;
+
+  &--prev {
+  }
+
+  &--next {
+  }
+
+  &--white {
+    border-color: rgba($white, 0.6);
+
+    svg {
+      fill: rgba($white, 0.6) !important;
+    }
+
+    @include hover {
+      border-color: $white !important;
+
+      svg {
+        fill: $white !important;
+      }
+    }
+  }
+
+  @include hover {
+    border-color: $brown;
+
+    svg {
+      fill: $brown;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    display: block;
+    align-self: center;
+    fill: rgba($brown, 0.6);
+
+    transition: fill $transition;
+  }
+}

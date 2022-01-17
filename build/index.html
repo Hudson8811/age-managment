@@ -189,13 +189,13 @@
                   </div>
                 </div>
                 <div class="wishmap__slider-controls">
-                  <button class="nav-btn nav-btn--prev" type="button" aria-label="prev">
+                  <button class="nav-btn--white nav-btn nav-btn--prev" type="button" aria-label="prev">
                     <svg width="16" height="28">
                       <use xlink:href="./images/sprite.svg#prev"></use>
                     </svg>
                   </button>
-                  <div class="wishmap__slider-controls pagination pagination--white"></div>
-                  <button class="nav-btn nav-btn--next" type="button" aria-label="next">
+                  <div class="pagination pagination--white"></div>
+                  <button class="nav-btn--white nav-btn nav-btn--next" type="button" aria-label="next">
                     <svg width="16" height="28">
                       <use xlink:href="./images/sprite.svg#next"></use>
                     </svg>
@@ -351,73 +351,85 @@
       </section>
       <section class="coaching-programs">
         <div class="coaching-programs__container container">
-          <h2 class="coaching-programs__title title">Программы коучинга управления возрастом</h2>
+          <h2 class="coaching-programs__title title"> <span>Программы коучинга управления возрастом</span></h2>
           <div class="coaching-programs__notice"><strong>Первая консультация</strong> для оценки совместимости консультанта и клиента, ответов на вопросы, выбора варианта сотрудничества <strong>бесплатная</strong></div>
           <div class="coaching-programs__slider swiper"> 
             <div class="swiper-wrapper">
-              <div class="coaching-programs__program coaching-program swiper-slide">
+              <div class="coaching-programs__program coaching-program swiper-slide"><span class="coaching-program__icon"> 
+                  <svg width="45" height="45">
+                    <use xlink:href="./images/sprite.svg#check-round"></use>
+                  </svg></span>
                 <div class="coaching-program__result">До достижения цели</div>
                 <h3 class="coaching-program__title">Управление возрастом. Результат</h3>
               </div>
-              <div class="coaching-programs__program coaching-program swiper-slide">
+              <div class="coaching-programs__program coaching-program swiper-slide"><span class="coaching-program__icon"> 
+                  <svg width="45" height="45">
+                    <use xlink:href="./images/sprite.svg#check-round"></use>
+                  </svg></span>
                 <div class="coaching-program__result">До формирования привычки</div>
                 <h3 class="coaching-program__title">Управление возрастом. Привычка</h3>
               </div>
-              <div class="coaching-programs__program coaching-program swiper-slide">
+              <div class="coaching-programs__program coaching-program swiper-slide"><span class="coaching-program__icon"> 
+                  <svg width="45" height="45">
+                    <use xlink:href="./images/sprite.svg#check-round"></use>
+                  </svg></span>
                 <div class="coaching-program__result">Получение знаний и навыков</div>
                 <h3 class="coaching-program__title">Управление возрастом. Обучение</h3>
               </div>
-              <div class="coaching-programs__program coaching-program swiper-slide">
+              <div class="coaching-programs__program coaching-program swiper-slide"><span class="coaching-program__icon"> 
+                  <svg width="45" height="45">
+                    <use xlink:href="./images/sprite.svg#check-round"></use>
+                  </svg></span>
                 <div class="coaching-program__result">Получение рекомендаций</div>
                 <h3 class="coaching-program__title">Управление возрастом. Рекомендации</h3>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="coaching-programs__slider-pagination pagination"></div>
           </div>
         </div>
       </section>
       <section class="steps">
         <div class="steps__container container"> 
-          <h2 class="steps__title title title--white">Этапы совместной работы</h2>
+          <h2 class="steps__title title title--white"> <span>Этапы совместной работы</span></h2>
           <div class="steps__slider swiper"> 
             <div class="swiper-wrapper">
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Первый бесплатный визит</h3>
-                <div class="steps__step-text">Для оценки совместимости с консультантом, ответов на Ваши вопросы, выбора варианта сотрудничества.</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Первый бесплатный визит</h3>
+                <div class="steps__slider-step-text">Для оценки совместимости с консультантом, ответов на Ваши вопросы, выбора варианта сотрудничества.</div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Обследования</h3>
-                <div class="steps__step-text">Инструментальные и лабораторные исследования,  оценка физического состояния и биологического возраста</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Обследования</h3>
+                <div class="steps__slider-step-text">Инструментальные и лабораторные исследования,  оценка физического состояния и биологического возраста</div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Коррекция нарушений и дефицитов</h3>
-                <div class="steps__step-text">Назначение и прием лекарственных средств врачом, назначение и прием БАД</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Коррекция нарушений и дефицитов</h3>
+                <div class="steps__slider-step-text">Назначение и прием лекарственных средств врачом, назначение и прием БАД</div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Получение письменных рекомендаций</h3>
-                <div class="steps__step-text">По образу жизни, питанию, контролю анализов, фитнесу</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Получение письменных рекомендаций</h3>
+                <div class="steps__slider-step-text">По образу жизни, питанию, контролю анализов, фитнесу</div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Обучение образу жизни, питанию, фитнесу</h3>
-                <div class="steps__step-text">Отработка на практике полученных рекомендаций, и их коррекция при необходимости</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Обучение образу жизни, питанию, фитнесу</h3>
+                <div class="steps__slider-step-text">Отработка на практике полученных рекомендаций, и их коррекция при необходимости</div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Формирование привычки</h3>
-                <div class="steps__step-text">Сопровождение и помощь в исполнении рекомендаций до выработки устойчивой привычки </div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Формирование привычки</h3>
+                <div class="steps__slider-step-text">Сопровождение и помощь в исполнении рекомендаций до выработки устойчивой привычки </div><span class="steps__slider-step-border"></span>
               </div>
-              <div class="steps__step swiper-slide">
-                <h3 class="steps__step-title">Результат</h3>
-                <div class="steps__step-text">Достижение промежуточного результата и определение новой цели</div>
+              <div class="steps__slider-step swiper-slide">
+                <h3 class="steps__slider-step-title">Результат</h3>
+                <div class="steps__slider-step-text">Достижение промежуточного результата и&nbsp;определение новой цели</div><span class="steps__slider-step-border"></span>
               </div>
             </div>
           </div>
-          <div class="steps__image"><img src="images/steps-img.jpg" srcset="images/steps-img@2x.jpg 2x" width="822" height="822" alt="Яхницкий Георгий Георгевич"></div>
+          <div class="steps__image"><img src="images/steps-img.png" srcset="images/steps-img@2x.png 2x" width="574" height="682" alt="Яхницкий Георгий Георгевич"></div>
         </div>
       </section>
       <!-- include ../modules/programs-->
       <section class="cost"> 
         <div class="cost__container container"> 
-          <h2 class="cost__title title">Стоимость и условия оплаты</h2>
+          <h2 class="cost__title title"> <span>Стоимость и условия оплаты</span></h2>
           <div class="cost__slider swiper"> 
             <div class="swiper-wrapper">
               <div class="cost__card cost-card swiper-slide">
@@ -474,7 +486,7 @@
       </section>
       <section class="program-tables">
         <div class="program-tables__container container"> 
-          <h2 class="program-tables__title title">Программы</h2>
+          <h2 class="program-tables__title title"> <span>Программы</span></h2>
           <div class="program-tables__tabs tabs swiper">
             <div class="swiper-wrapper">
               <button class="tabs__item btn btn--round btn--active" type="button" data-target="table-offline">Управление возрастом Offline</button>
@@ -491,14 +503,14 @@
             </button>
             <div class="program-tables__table table program-tables__table--active" id="table-offline">
               <div class="table__head">
-                <div class="table__head-cell">Программы</div>
-                <div class="table__head-cell">Подробности оплаты</div>
-                <div class="table__head-cell">Цель программы</div>
+                <div class="table__head-cell"><span>Программы</span></div>
+                <div class="table__head-cell"><span>Подробности оплаты</span></div>
+                <div class="table__head-cell"><span>Цель программы</span></div>
                 <div class="table__head-cell table__head-cell--composite">
                   <div class="table__head-cell-hint">Offline программы</div>
-                  <div class="table__head-cell-part">Количество встреч</div>
-                  <div class="table__head-cell-part">Цена, $</div>
-                  <div class="table__head-cell-part">Цена для партнера (-15% от цены)</div>
+                  <div class="table__head-cell-part"><span>Количество встреч</span></div>
+                  <div class="table__head-cell-part"><span>Цена, $</span></div>
+                  <div class="table__head-cell-part"><span>Цена для партнера (-15% от цены)</span></div>
                 </div>
               </div>
               <div class="table__body swiper"> 
@@ -541,15 +553,15 @@
             </div>
             <div class="program-tables__table table" id="table-online">
               <div class="table__head">
-                <div class="table__head-cell">Программы</div>
-                <div class="table__head-cell">Подробности оплаты</div>
-                <div class="table__head-cell">Цель программы</div>
+                <div class="table__head-cell"><span>Программы</span></div>
+                <div class="table__head-cell"><span>Подробности оплаты</span></div>
+                <div class="table__head-cell"><span>Цель программы</span></div>
                 <div class="table__head-cell table__head-cell--composite">
                   <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-part">Количество встреч online без фитнеса</div>
-                  <div class="table__head-cell-part">Online без фитнеса</div>
-                  <div class="table__head-cell-part">Количество встреч online + фитнес</div>
-                  <div class="table__head-cell-part">Online с фитнесом</div>
+                  <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
+                  <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
                 </div>
               </div>
               <div class="table__body swiper"> 
@@ -592,15 +604,15 @@
             </div>
             <div class="program-tables__table table" id="table-additional">
               <div class="table__head">
-                <div class="table__head-cell">Программы</div>
-                <div class="table__head-cell">Подробности оплаты</div>
-                <div class="table__head-cell">Цель программы</div>
+                <div class="table__head-cell"><span>Программы</span></div>
+                <div class="table__head-cell"><span>Подробности оплаты</span></div>
+                <div class="table__head-cell"><span>Цель программы</span></div>
                 <div class="table__head-cell table__head-cell--composite">
                   <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-part">Количество встреч online без фитнеса</div>
-                  <div class="table__head-cell-part">Online без фитнеса</div>
-                  <div class="table__head-cell-part">Количество встреч online + фитнес</div>
-                  <div class="table__head-cell-part">Online с фитнесом</div>
+                  <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
+                  <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
                 </div>
               </div>
               <div class="table__body swiper"> 
@@ -643,21 +655,21 @@
             </div>
             <div class="program-tables__table table" id="table-payment">
               <div class="table__head">
-                <div class="table__head-cell">Программы</div>
-                <div class="table__head-cell">Подробности оплаты</div>
-                <div class="table__head-cell">Содержание</div>
+                <div class="table__head-cell"><span>Программы</span></div>
+                <div class="table__head-cell"><span>Подробности оплаты</span></div>
+                <div class="table__head-cell"><span>Содержание</span></div>
                 <div class="table__head-cell table__head-cell--composite">
                   <div class="table__head-cell-hint">Offline программы</div>
-                  <div class="table__head-cell-part">Количество встреч</div>
-                  <div class="table__head-cell-part">Цена, $</div>
-                  <div class="table__head-cell-part">Цена для партнера (-15% от цены)</div>
+                  <div class="table__head-cell-part"><span>Количество встреч</span></div>
+                  <div class="table__head-cell-part"><span>Цена, $</span></div>
+                  <div class="table__head-cell-part"><span>Цена для партнера (-15% от цены)</span></div>
                 </div>
                 <div class="table__head-cell table__head-cell--composite">
                   <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-part">Количество встреч online без фитнеса</div>
-                  <div class="table__head-cell-part">Online без фитнеса</div>
-                  <div class="table__head-cell-part">Количество встреч online + фитнес</div>
-                  <div class="table__head-cell-part">Online с фитнесом</div>
+                  <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
+                  <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
+                  <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
                 </div>
               </div>
               <div class="table__body swiper"> 
@@ -704,70 +716,66 @@
               </svg>
             </button>
             <div class="program-tables__pagination pagination pagination--white">
-              <button class="pagination__dot" type="button" data-target="1">1</button>
+              <!--button.pagination__dot(type="button", data-target="1") 1-->
             </div>
           </div>
         </div>
       </section>
-      <section class="about-coach">
-        <div class="about-coach__container container"> 
-          <div class="about-coach__aside"> 
-            <div class="about-coach__slider swiper"> 
+      <!--include ../modules/about-coach-->
+      <section class="certificates">
+        <div class="certificates__container container"> 
+          <div class="certificates__slider">
+            <div class="swiper"> 
               <div class="swiper-wrapper">
-                <div class="swiper-slide"> <img src="images/certificate.jpg" width="490" height="320" alt="Сертификат школы health-коучинга"></div>
-                <div class="swiper-slide"> <img src="images/certificate.jpg" width="490" height="320" alt="Сертификат школы health-коучинга"></div>
-                <div class="swiper-slide"> <img src="images/certificate.jpg" width="490" height="320" alt="Сертификат школы health-коучинга"></div>
-                <div class="swiper-slide"> <img src="images/certificate.jpg" width="490" height="320" alt="Сертификат школы health-коучинга"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/certif-2.jpg" width="405" height="265" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/certif-3.jpg" width="374" height="265" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/certif-1.jpg" width="373" height="265" alt="Сертификат"></div>
               </div>
-              <div class="about-coach__slider-nav">
-                <button class="nav-btn nav-btn--prev" type="button" aria-label="prev">
-                  <svg width="16" height="28">
-                    <use xlink:href="./images/sprite.svg#prev"></use>
-                  </svg>
-                </button>
-                <button class="nav-btn nav-btn--next" type="button" aria-label="next">
-                  <svg width="16" height="28">
-                    <use xlink:href="./images/sprite.svg#next"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="about-coach__pagination pagination"></div>
+              <div class="certificates__pagination pagination"></div>
             </div>
-          </div>
-          <div class="about-couch__main"> 
-            <h2 class="about-coach__title title title--line">О коуче</h2>
-            <div class="about-coach__subtitle">Специализация</div>
-            <div class="about-coach__text">Здесь написать про специлизацию про коуча, и так далее усилия врача, диетолога, нутрициолога и фитнес-тренера. Я научу Вас понимать показатели своего здоровья, принципы и навыки здорового образа жизни и предупреждения болезни, помогу сформировать</div>
+            <div class="certificates__slider-nav">
+              <button class="nav-btn nav-btn--prev" type="button" aria-label="prev">
+                <svg width="16" height="28">
+                  <use xlink:href="./images/sprite.svg#prev"></use>
+                </svg>
+              </button>
+              <button class="nav-btn nav-btn--next" type="button" aria-label="next">
+                <svg width="16" height="28">
+                  <use xlink:href="./images/sprite.svg#next"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
       <section class="slogan">
         <div class="slogan__container container"> 
           <div class="slogan__main">
-            <h2 class="about-coach__main-title title title--line">Слоган</h2>
-            <div class="slogan__main-slogan"><span>Управляйте возрастом —</span> счастливая жизнь до глубокой старости это интересно!</div>
-            <div class="slogan__main-text">Формула Счастья: 6 «С» "С": Солнце - Сон - Смех - Спорт - Секс - Социализация. Время, в течение которого человек здоров, а не просто жив (Health span, англ. Health - здоровье, span – простирается)</div><a class="slogan__main-btn btn btn--white" href="#">Подробнее</a>
+            <h2 class="slogan__main-title"><span>Управляйте возрастом —</span> счастливая жизнь до&nbsp;глубокой старости это интересно!</h2>
+            <div class="slogan__main-text">Формула Счастья: 6 «С» "С": <br>Солнце - Сон - Смех - Спорт - Секс - Социализация. Время, в течение которого человек здоров, а не просто&nbsp;жив (Health span, англ. Health - здоровье, span – простирается)</div>
           </div>
-          <div class="slogan__image"><img src="images/slogan-img.png" srcset="images/slogan-img@2x.png 2x" width="725" height="535" alt="Яхницкий Георгий Георгевич"></div>
+          <div class="slogan__image"><img src="images/slogan-img.jpg" srcset="images/slogan-img@2x.jpg 2x" width="598" height="513" alt="Яхницкий Георгий Георгевич">
+            <div class="slogan__image-caption">Получай Удовольствия от жизни долго! <br>Любовь, секс, вино и море до глубокой старости!</div>
+          </div>
         </div>
       </section>
       <section class="application">
         <div class="application__container container"> 
-          <h2 class="application__title title">Запишитесь на первую бесплатную консультацию</h2>
-          <div class="application__form"> 
-            <div class="application__form-title">Пришло время действовать!</div>
-            <div class="application__form-text">Оставьте заявку, мой ассистент свяжется с Вами в течение 30 минут</div>
+          <h2 class="application__title title"> <span>Запишитесь на первую бесплатную консультацию</span></h2>
+          <div class="application__form form">
+            <div class="form__title">Пришло время действовать!</div>
+            <div class="form__text">Оставьте заявку, мой ассистент свяжется с Вами в&nbsp;течение 30 минут</div>
             <form action="#" method="post">
-              <label class="application__form-field field"><span class="field__hint">Ваше имя:</span>
+              <label class="form__field field"><span class="field__hint">Ваше имя:</span>
                 <input type="text" name="name" placeholder="Введите имя">
               </label>
-              <label class="application__form-field field"><span class="field__hint">Ваш email:</span>
+              <label class="form__field field"><span class="field__hint">Ваш email:</span>
                 <input type="email" name="email" placeholder="Введите email">
               </label>
-              <label class="application__form-field field"><span class="field__hint">Ваш телефон:</span>
+              <label class="form__field field"><span class="field__hint">Ваш телефон:</span>
                 <input type="tel" name="phone" placeholder="Введите телефон">
               </label>
-              <button class="application__form-send" type="submit">Отправить</button>
+              <button class="form__send" type="submit">Отправить</button>
             </form>
           </div>
         </div>

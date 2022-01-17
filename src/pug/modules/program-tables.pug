@@ -1,6 +1,7 @@
 section.program-tables
   .program-tables__container.container 
-    h2.program-tables__title.title Программы
+    h2.program-tables__title.title 
+      span Программы
 
     .program-tables__tabs.tabs.swiper
       .swiper-wrapper
@@ -12,13 +13,15 @@ section.program-tables
         .program-tables__table.table(class= (index === 0 ? 'program-tables__table--active' : ''), id="table-" + item.id)
           .table__head
             each headSimpleCell in item.head.simple
-              .table__head-cell!= headSimpleCell
+              .table__head-cell
+                span!= headSimpleCell
 
             each headCompositeCell in item.head.composite
               .table__head-cell.table__head-cell--composite
                 .table__head-cell-hint!= headCompositeCell.title
                 each headCompositeCellPart in headCompositeCell.list
-                  .table__head-cell-part!= headCompositeCellPart
+                  .table__head-cell-part
+                    span!= headCompositeCellPart
           
           .table__body.swiper 
             .swiper-wrapper
@@ -29,4 +32,4 @@ section.program-tables
             .swiper-pagination
       +nav-btn('next', 'program-tables__next')
       .program-tables__pagination.pagination.pagination--white
-        button.pagination__dot(type="button", data-target="1") 1
+        //button.pagination__dot(type="button", data-target="1") 1
