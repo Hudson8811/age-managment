@@ -8,28 +8,47 @@ section.program-tables
         each item, index in PROGRAM_TABLES_TABS
           button.tabs__item.btn.btn--round(class= (index === 0 ? 'btn--active' : ''), type="button", data-target= item.target)!= item.text
     .program-tables__main
-      +nav-btn('prev', 'program-tables__prev')
-      each item, index in PROGRAM_TABLES
-        .program-tables__table.table(class= (index === 0 ? 'program-tables__table--active' : ''), id="table-" + item.id)
+      +nav-btn('prev', 'program-tables__prev nav-btn--white')
+      
+      each table, index in PROGRAM_TABLES
+        .program-tables__table(class= (index === 0 ? 'program-tables__table--active table table--' + table.id : 'table table--' + table.id), id="table-" + table.id)
           .table__head
-            each headSimpleCell in item.head.simple
-              .table__head-cell
-                span!= headSimpleCell
+            .table__head-group
+              each headSimpleCell in table.head.simple
+                .table__head-cell
+                  span!= headSimpleCell
 
-            each headCompositeCell in item.head.composite
-              .table__head-cell.table__head-cell--composite
+            each headCompositeCell in table.head.composite
+              .table__head-cell.table__head-cell--composite(class= (headCompositeCell.list.length > 3 ? 'table__head-cell--composite-online' : 'table__head-cell--composite-offline'))
                 .table__head-cell-hint!= headCompositeCell.title
-                each headCompositeCellPart in headCompositeCell.list
-                  .table__head-cell-part
-                    span!= headCompositeCellPart
+                .table__head-cell-row
+                  each headCompositeCellPart in headCompositeCell.list
+                    .table__head-cell-part
+                      span!= headCompositeCellPart
           
           .table__body.swiper 
             .swiper-wrapper
-              each item in PROGRAM_TABLES_ROWS_OFFLINE
+              each row in table.rows 
                 .table__row.swiper-slide
-                  each cell in item 
-                    .table__cell!= cell
+                  .table__group-cells
+                    each cell in row.firstThreeCells
+                      .table__cell
+                        span!= cell
+
+                  each group in row.groupCells
+                    .table__cell.table__cell--composite(class= (group.length > 3 ? 'table__cell--composite-online' : 'table__cell--composite-offline'))
+                      each cell in group
+                        .table__cell-part
+                          span!= cell
             .swiper-pagination
-      +nav-btn('next', 'program-tables__next')
+      
+      +nav-btn('next', 'program-tables__next nav-btn--white')
       .program-tables__pagination.pagination.pagination--white
-        //button.pagination__dot(type="button", data-target="1") 1
+        button.pagination__dot.active(type="button", data-target="1") 
+          span.visually-hidden 1
+        button.pagination__dot(type="button", data-target="1") 
+          span.visually-hidden 2
+        button.pagination__dot(type="button", data-target="1") 
+          span.visually-hidden 3
+        button.pagination__dot(type="button", data-target="1") 
+          span.visually-hidden 4

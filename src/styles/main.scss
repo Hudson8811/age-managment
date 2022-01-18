@@ -16,6 +16,7 @@
 @import "partials/main";
 
 /* components */
+@import "blocks/social";
 @import "blocks/title";
 @import "blocks/nav";
 @import "blocks/wishmap-result-item";
@@ -25,6 +26,7 @@
 @import "blocks/form";
 @import "blocks/tabs";
 @import "blocks/table";
+@import "blocks/program-card";
 
 @import "blocks/hero";
 @import "blocks/but";
@@ -38,6 +40,8 @@
 @import "blocks/application";
 @import "blocks/certificates";
 @import "blocks/program-tables";
+@import "blocks/program-cards";
+@import "blocks/program-detail";
 
 @import "partials/header";
 @import "partials/footer";

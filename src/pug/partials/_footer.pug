@@ -9,17 +9,14 @@ footer.footer
               li 
                 a(href= li.url)!= li.text 
     .footer__contacts
-      .footer__contacts-item
+      .footer__contacts-item.footer__contacts-item--phone
         .footer__contacts-item-icon 
-          +icon('phone')(width="21", height="21")
         a(href="tel:+375292313432") +375 29 231 34 32
-      .footer__contacts-item
+      .footer__contacts-item.footer__contacts-item--mail
         .footer__contacts-item-icon 
-          +icon('mail')(width="21", height="21")
         a(href="mailto:sonovamar@company.com") sonovamar@company.com
-      .footer__contacts-item
+      .footer__contacts-item.footer__contacts-item--address
         .footer__contacts-item-icon 
-          +icon('pin')(width="21" height="28")
         address Пр. Независимости, 56
     .footer__download-app 
       a(href="#")
@@ -31,7 +28,7 @@ footer.footer
       each item in SOCIAL
         li.social__item
           a(href= item.url, target="_blank")
-            span.visully-hidden= item.text
+            span.visually-hidden= item.text
             +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
     
     .footer__line 

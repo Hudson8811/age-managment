@@ -5,6 +5,7 @@
 
   font-size: 20px;
   line-height: 1;
+  color: $blue-11;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -35,8 +36,18 @@
 
   &--round {
     padding: 16px 16px 17px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 24px;
+  }
+
+  &--white {
+    border-color: $white;
+    color: $white;
+
+    @include hover {
+      background-color: $white;
+      color: $blue-11;
+    }
   }
 
   &--active {
@@ -44,4 +55,9 @@
     background-color: $blue-11;
     pointer-events: none;
   }
+}
+
+.btn--active.btn--white {
+  color: $blue-11;
+  background-color: $white;
 }

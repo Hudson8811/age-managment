@@ -1,0 +1,24 @@
+section.program-detail
+  .program-detail__container.container
+    .program-detail__tabs.tabs.swiper
+      .swiper-wrapper
+        each item, index in PROGRAM_DETAIL
+          button.tabs__item.btn.btn--round.btn--white(class= (index === 0 ? 'btn--active' : ''), type="button", data-target= item.id)!= item.title
+    .program-detail__main
+      +nav-btn('prev', 'program-detail__prev nav-btn--white')
+
+      each item, index in PROGRAM_DETAIL
+        .program-detail__content(class= (index === 0 ? 'program-detail__content--active' : ''), id= item.id)
+          .program-detail__head 
+            .program-detail__head-title!= item.title
+            .program-detail__head-text!= item.text
+
+          ul.program-detail__list 
+            each li in item.list 
+              li.program-detail__item
+                .program-detail__item-title!= li.title
+                .program-detail__item-text!= li.text
+      
+      +nav-btn('next', 'program-detail__next nav-btn--white')
+
+      a.program-detail__btn.btn.btn.btn--white(href="#") Узнать цену

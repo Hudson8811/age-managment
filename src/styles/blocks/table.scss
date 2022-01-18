@@ -1,11 +1,26 @@
 .table {
+  $self: &;
+  background-color: $white;
+
   &__head {
+    $head: &;
     display: flex;
+    width: 100%;
     padding: 16px 10px;
     border-radius: 4px;
     background-color: $blue-11;
 
+    &-group {
+      display: flex;
+      flex-grow: 1;
+
+      #{$head}-cell {
+        width: 33.33%;
+      }
+    }
+
     &-cell {
+      $cell: &;
       display: flex;
       padding: 0 20px;
       font-size: 12px;
@@ -13,25 +28,46 @@
       color: $white;
       font-weight: 600;
       text-transform: uppercase;
+      flex-grow: 1;
 
       &--composite {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
+        display: block;
+        padding: 0 10px;
         font-size: 9px;
       }
 
+      &--composite-online {
+        max-width: 34.5%;
+
+        #{$cell}-part {
+          width: 25%;
+        }
+      }
+
+      &--composite-offline {
+        max-width: 30.5%;
+
+        #{$cell}-part {
+          width: 33.33%;
+        }
+      }
+
       &-hint {
-        width: 100%;
-        margin: 0 20px 8px;
+        width: calc(100% - 20px);
+        margin: 0 10px 8px;
         padding: 0 0 5px;
         border-bottom: solid 1px rgba($white, 0.5);
         text-align: center;
       }
 
+      &-row {
+        display: flex;
+      }
+
       &-part {
         display: flex;
-        padding: 0 20px;
+        padding: 0 10px;
+        flex-grow: 1;
 
         & + & {
           border-left: solid 1px rgba($white, 0.5);
@@ -53,8 +89,79 @@
   }
 
   &__body {
+    padding: 10px 10px;
+
     .swiper-wrapper {
       flex-wrap: wrap;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__group-cells {
+    display: flex;
+    flex-grow: 1;
+
+    #{$self}__cell {
+      width: 33.33%;
+      flex-shrink: 0;
+    }
+  }
+
+  &__cell {
+    $cell: &;
+    display: flex;
+    flex-grow: 1;
+
+    padding: 24px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $blue-11;
+
+    &:first-child {
+      b {
+        font-weight: 600;
+      }
+    }
+
+    &--composite {
+      display: flex;
+      width: 100%;
+      padding: 0 10px;
+      flex-shrink: 0;
+    }
+
+    &--composite-online {
+      max-width: 34.5%;
+
+      #{$cell}-part {
+        width: 25%;
+      }
+    }
+
+    &--composite-offline {
+      max-width: 30.5%;
+
+      #{$cell}-part {
+        width: 33.33%;
+      }
+    }
+
+    span {
+      align-self: center;
+    }
+
+    &-part {
+      display: flex;
+      justify-content: center;
+      padding: 0 10px;
+      flex-grow: 1;
+
+      span {
+        align-self: center;
+      }
     }
   }
 }
