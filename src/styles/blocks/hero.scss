@@ -13,6 +13,10 @@
 
   overflow: hidden;
 
+  @include max(sm) {
+    background: none;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -28,16 +32,33 @@
     left: 0;
     transform-origin: 0 100%;
     transform: rotate(-1.25deg);
+
+    @include max(sm) {
+      display: none;
+    }
   }
 
   &::after {
     right: 0;
     transform-origin: 100% 100%;
     transform: rotate(1.25deg);
+
+    @include max(sm) {
+      width: 100%;
+      transform: rotate(0);
+      background-color: $white;
+      background-size: 100% auto;
+      background-position: left 50% bottom 0;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='320' height='1102' viewBox='0 0 320 1102' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M-225.783 0h752.767v1100.43l-752.767-52.01V0Z' fill='%2340201A' fill-opacity='.72'/%3e%3cpath d='M554.667 1.565h-844.334V1102l844.334-52.01V1.565Z' fill='%2340201A' fill-opacity='.72'/%3e%3cpath fill='%2340201A' d='M-225.783 48.978h752.767v1009.37h-752.767z'/%3e%3c/svg%3e");
+    }
   }
 
   &__container {
     display: flex;
+
+    @include max(md) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__main {
@@ -45,9 +66,26 @@
     padding-left: 75px;
     border-left: solid 1px $white;
 
+    @include max(lg) {
+      width: 60%;
+      padding-left: 36px;
+    }
+
+    @include max(md) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      border-left: none;
+    }
+
     &-questions {
       max-width: 525px;
       margin-bottom: 31px;
+
+      @include max(md) {
+        max-width: none;
+      }
     }
 
     &-question {
@@ -56,6 +94,14 @@
       font-size: 16px;
       line-height: 1.21875;
       color: $white;
+
+      @include max(md) {
+        padding-right: 0;
+      }
+
+      @include max(xs) {
+        font-size: 11px;
+      }
 
       & + & {
         margin-top: 11px;
@@ -77,9 +123,6 @@
       }
     }
 
-    &-info {
-    }
-
     &-title {
       max-width: 530px;
       margin: 0 0 25px;
@@ -87,6 +130,15 @@
       line-height: 39px;
       font-weight: 400;
       color: $white;
+
+      @include max(md) {
+        max-width: none;
+        order: -1;
+      }
+
+      @include max(xs) {
+        font-size: 28px;
+      }
     }
 
     &-name {
@@ -94,23 +146,40 @@
       max-width: 340px;
       margin-bottom: 37px;
 
+      @include max(xs) {
+        max-width: 320px;
+      }
+
       &-icon {
         width: 58px;
         margin-right: 27px;
         flex-shrink: 0;
         align-self: center;
+
+        @include max(xs) {
+          width: 49px;
+          margin-right: 30px;
+        }
       }
 
       &-text {
         font-size: 26px;
         color: $white;
         align-self: center;
+
+        @include max(xs) {
+          font-size: 18px;
+        }
       }
     }
 
     &-skills {
       display: flex;
       margin-bottom: 25px;
+
+      @include max(xs) {
+        flex-direction: column;
+      }
 
       &-title {
         max-width: 236px;
@@ -121,6 +190,10 @@
         flex-shrink: 0;
         order: -1;
         align-self: center;
+
+        @include max(xs) {
+          align-self: flex-start;
+        }
       }
 
       &-list {
@@ -139,6 +212,12 @@
         margin: 0 15px;
         background-color: $white;
         flex-shrink: 0;
+
+        @include max(xs) {
+          width: 80px;
+          height: 1px;
+          margin: 15px 0;
+        }
       }
     }
 
@@ -153,10 +232,17 @@
       font-weight: 700;
       text-decoration: none;
       text-align: center;
+      border: none;
       border-radius: 5px;
       background-color: rgba($white, 0.56);
 
       transition: background-color $transition;
+      appearance: none;
+      cursor: pointer;
+
+      @include max(md) {
+        max-width: none;
+      }
 
       @include hover {
         background-color: $white;
@@ -178,6 +264,21 @@
     border-radius: 50%;
     flex-shrink: 0;
     align-self: center;
+
+    @include max(lg) {
+      width: 40%;
+      height: auto;
+      align-self: flex-start;
+    }
+
+    @include max(md) {
+      width: 80%;
+      margin: 0 auto 45px;
+    }
+
+    @include max(sm) {
+      width: 80%;
+    }
 
     img {
       display: block;

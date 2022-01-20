@@ -6,6 +6,10 @@ body {
   font-family: $mainFont;
   color: $textMainColor;
   line-height: $lh-main;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -13,6 +17,14 @@ body {
   max-width: 1270px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include max(lg) {
+    max-width: 990px;
+  }
+
+  @include max(md) {
+    max-width: 750px;
+  }
 }
 
 .visually-hidden {

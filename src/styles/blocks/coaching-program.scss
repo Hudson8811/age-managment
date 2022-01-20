@@ -4,6 +4,10 @@
   border-radius: 16px;
   background-color: $brown;
 
+  @include max(sm) {
+    padding: 50px 15px;
+  }
+
   &__icon {
     position: absolute;
     top: 0;
@@ -14,6 +18,20 @@
     padding: 10px;
     border-radius: 50%;
     background-color: $brown;
+
+    @include max(sm) {
+      left: 50%;
+      transform: translateY(-27px) translateX(-50%);
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
     &::before,
     &::after {
@@ -30,12 +48,22 @@
       width: 87px;
       height: 87px;
       border: solid 1px rgba($white, 0.33);
+
+      @include max(sm) {
+        width: 65px;
+        height: 65px;
+      }
     }
 
     &::after {
       width: 119px;
       height: 119px;
       border: solid 1px rgba($white, 0.09);
+
+      @include max(sm) {
+        width: 89px;
+        height: 89px;
+      }
     }
   }
 
@@ -45,6 +73,17 @@
     color: rgba($white, 0.85);
     font-weight: 300;
     text-align: center;
+
+    @include max(md) {
+      font-size: 36px;
+    }
+
+    @include max(xs) {
+      //padding-left: 16px;
+      //padding-right: 16px;
+      font-size: 28px;
+      line-height: 1.268928571428571;
+    }
   }
 
   &__title {
@@ -53,9 +92,15 @@
     color: rgba($white, 0.85);
     font-weight: 600;
     text-align: center;
-  }
-}
 
-.coaching-programs + .steps {
-  margin-top: -438px;
+    @include max(md) {
+      font-size: 30px;
+    }
+
+    @include max(xs) {
+      margin: 3px 0 0;
+      font-size: 21px;
+      line-height: 1.268928571428571;
+    }
+  }
 }

@@ -2,10 +2,24 @@
   position: relative;
   padding-top: 104px;
 
+  @include max(sm) {
+    padding-top: 83px;
+  }
+
   &__icon {
     position: absolute;
     top: 0;
     left: 0;
+
+    @include max(sm) {
+      height: 63px;
+
+      svg {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 
   &__title {
@@ -14,11 +28,20 @@
     line-height: 1.21875;
     color: $white;
     font-weight: 600;
+
+    @include max(sm) {
+      font-size: 12px;
+      line-height: 1.219166666666667;
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.289285714285714;
     color: $white;
+
+    @include max(sm) {
+      font-size: 10px;
+    }
   }
 }

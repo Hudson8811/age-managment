@@ -1,13 +1,44 @@
 .header {
+  $self: &;
   position: sticky;
   top: 0;
   z-index: 99;
   padding: 15px 0;
   background-color: $white;
 
+  @include max(md) {
+    display: flex;
+    padding: 11px 0;
+    min-height: 56px;
+  }
+
+  &.menu-opened {
+    #{$self}__logo {
+      display: none;
+    }
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
+
+    @include max(lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__logo {
+    margin-right: 42px;
+
+    @include max(md) {
+      height: 34px;
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 
   &__action {
@@ -16,10 +47,29 @@
     align-self: center;
 
     &-item {
+      display: block;
       align-self: center;
+
+      width: 24px;
+      height: 24px;
+
+      @include max(md) {
+        width: 16px;
+        height: 16px;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
 
       & + & {
         margin-left: 24px;
+
+        @include max(md) {
+          margin-left: 16px;
+        }
       }
 
       svg {
@@ -33,18 +83,123 @@
   &__menu {
     display: flex;
     align-self: center;
+
+    @include max(md) {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 56px);
+      padding: 0 16px 16px;
+
+      border-top: solid 1px $smoky;
+      background-color: $white;
+    }
+
+    &.animate {
+      transition: transform $transition;
+    }
+
+    &.opened {
+      @include max(md) {
+        transform: translateX(0);
+      }
+    }
   }
 
   &__nav {
     align-self: center;
+
+    @include max(md) {
+      width: 100%;
+      margin-bottom: auto;
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @include max(md) {
+      display: flex;
+      margin-top: 20px;
+    }
   }
 
   &__btn {
     margin-left: 40px;
     align-self: center;
+
+    @include max(md) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 22px;
+      padding: 16px;
+      font-size: 20px;
+      line-height: 1.219;
+      color: $white;
+      font-weight: 700;
+      border-radius: 5px;
+      border: none;
+      background-color: $brown;
+      transition: none;
+    }
   }
 
   &__toggle {
+    $toggle: &;
+
     display: none;
+
+    width: 21px;
+    height: 21px;
+    margin-left: 16px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    outline: none;
+    align-self: center;
+
+    @include max(md) {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &-icon {
+      align-self: center;
+
+      svg {
+        display: block;
+        fill: $blue-11;
+      }
+
+      &--close {
+        display: none;
+
+        svg {
+          fill: $grey-aa;
+        }
+      }
+    }
+
+    &.opened {
+      margin-left: auto;
+
+      #{$toggle}-icon {
+        &--bar {
+          display: none;
+        }
+
+        &--close {
+          display: block;
+        }
+      }
+    }
   }
 }

@@ -21,6 +21,12 @@
 
     background-color: rgba($brown, 0.3);
     transition: background-color $transition;
+
+    @include max(xs) {
+      width: 11px;
+      height: 11px;
+      margin: 2px 3px;
+    }
   }
 
   & > [class*="active"] {

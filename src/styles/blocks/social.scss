@@ -1,8 +1,40 @@
 .social {
+  $self: &;
   display: flex;
   width: 100%;
   justify-content: center;
   margin: -8px 0 !important;
+
+  @include max(xs) {
+    padding: 32px 0 !important;
+
+    border-top: solid 1px rgba($white, 0.5);
+    border-bottom: solid 1px rgba($white, 0.5);
+  }
+
+  &--header {
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    #{$self}__item {
+      margin-left: 19px;
+      margin-right: 19px;
+
+      a {
+        width: 25px;
+        height: 19px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+          fill: $blue-11;
+        }
+      }
+    }
+  }
 
   &::before,
   &::after {
@@ -10,6 +42,10 @@
     border-top: solid 1px rgba($white, 0.5);
     flex-grow: 1;
     align-self: center;
+
+    @include max(sm) {
+      display: none;
+    }
   }
 
   &::before {
@@ -25,6 +61,8 @@
     align-self: center;
 
     a {
+      display: block;
+
       svg {
         display: block;
         fill: $white;

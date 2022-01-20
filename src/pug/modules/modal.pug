@@ -1,0 +1,13 @@
+.form#form(style="display: none")
+  button.form__close.__js_close-modal(type="button")
+    +icon('close')(width="13", height="13")
+  .form__title Пришло время действовать!
+  .form__text Оставьте заявку, мой ассистент свяжется с Вами в&nbsp;течение 30 минут
+
+  form(action="#", method="post")
+    each item in FORM_FIELDS
+      label.form__field.field
+        span.field__hint!= item.hint
+        input(type= item.type, name= item.name, placeholder= item.placeholder)
+    button.form__send(type="submit") Отправить
+  button.form__close-btn.__js_close-modal(type="button") Закрыть

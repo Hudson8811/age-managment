@@ -1,11 +1,19 @@
 .coaching-programs {
   padding: 30px 0 60px;
 
+  @include max(xs) {
+    padding: 72px 0 60px;
+  }
+
   &__container {
   }
 
   &__title {
     margin-bottom: 24px;
+
+    @include max(xs) {
+      margin-bottom: 27px;
+    }
   }
 
   &__notice {
@@ -17,6 +25,12 @@
     color: $blue-11;
     text-align: center;
 
+    @include max(xs) {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 1.21875;
+    }
+
     strong,
     b {
       font-weight: 900;
@@ -26,14 +40,41 @@
   &__slider {
     overflow: visible;
 
+    @include max(sm) {
+      padding-top: 30px;
+      overflow: hidden;
+    }
+
     .swiper-wrapper {
       display: block;
+
+      @include max(sm) {
+        display: flex;
+      }
+    }
+
+    &-pagination {
+      margin-top: 16px;
     }
   }
 
   &__program {
+    height: auto;
+
     & + & {
       margin-top: 25px;
+
+      @include max(sm) {
+        margin-top: 0;
+      }
     }
+  }
+}
+
+.coaching-programs + .steps {
+  margin-top: -438px;
+
+  @include max(xs) {
+    margin-top: -236px;
   }
 }

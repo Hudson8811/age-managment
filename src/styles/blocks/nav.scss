@@ -1,12 +1,57 @@
 .nav {
+  $self: &;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include max(md) {
+      flex-direction: column;
+    }
   }
 
   &__item {
+    position: relative;
+
+    &.opened {
+      &::after {
+        transform: scale(1, -1);
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64.732A1 1 0 1 0 .36 2.268l7.186 5.989a.999.999 0 0 0 1.308 0l7.186-5.989A1 1 0 0 0 14.76.732L8.2 6.198 1.64.732Z' fill='%23aaaaaa'/%3e%3c/svg%3e");
+      }
+
+      #{$self}__link {
+        color: rgba($blue-11, 0.6);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 17px;
+      height: 9px;
+      margin-top: -4px;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64.732A1 1 0 1 0 .36 2.268l7.186 5.989a.999.999 0 0 0 1.308 0l7.186-5.989A1 1 0 0 0 14.76.732L8.2 6.198 1.64.732Z' fill='%23112F59'/%3e%3c/svg%3e");
+      transition: transform $transition;
+    }
+
+    @include max(md) {
+      border-bottom: solid 1px $smoky;
+
+      &::after {
+        display: block;
+      }
+    }
+
     & + & {
       margin-left: 40px;
+
+      @include max(md) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -22,6 +67,11 @@
 
     @include hover {
       color: $blue-56;
+    }
+
+    @include max(md) {
+      padding: 19px 24px 19px 0;
+      font-weight: 700;
     }
   }
 }

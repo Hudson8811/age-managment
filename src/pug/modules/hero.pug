@@ -4,19 +4,18 @@ section.hero
       .hero__main-questions
         each question in HERO_QUESTIONS
           .hero__main-question!= question
-      .hero__main-info 
-        h1.hero__main-title Авторский коучинг управления возрастом для&nbsp;счастливого долголетия
+      h1.hero__main-title Авторский коучинг управления возрастом для&nbsp;счастливого долголетия
 
-        .hero__main-name 
-          .hero__main-name-icon
-            img(src="images/doctor-logo.svg", width="58", height="58", alt="")
-          .hero__main-name-text Доктор Яхницкий Георгий Георгевич
-        
-        .hero__main-skills
-          .hero__main-skills-title Персональный коуч управления возрастом
-          .hero__main-skills-list Врач лечебно-профилактической медицины, специализация психотерапия, эндокринология, health coach, микронутрициолог, фитнес-тренер
-        
-        a.hero__main-btn(href="#") Записаться
+      .hero__main-name 
+        .hero__main-name-icon
+          img(src="images/doctor-logo.svg", width="58", height="58", alt="")
+        .hero__main-name-text Доктор Яхницкий Георгий Георгевич
+      
+      .hero__main-skills
+        .hero__main-skills-title Персональный коуч управления возрастом
+        .hero__main-skills-list Врач лечебно-профилактической медицины, специализация психотерапия, эндокринология, health coach, микронутрициолог, фитнес-тренер
+      
+      button.hero__main-btn.__js_show-modal(type="button") Записаться
 
     .hero__image
       img(src="images/hero-img.jpg", srcset="images/hero-img@2x.jpg 2x", width="553", height="553", alt="Яхницкий Георгий Георгевич")

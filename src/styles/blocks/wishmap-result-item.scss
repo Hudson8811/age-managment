@@ -1,13 +1,24 @@
 .wishmap-result-item {
   width: 191px;
 
+  @include max(md) {
+    width: 113px;
+  }
+
   &__icon {
     height: 44px;
     margin-bottom: 16px;
 
+    @include max(md) {
+      height: 19px;
+      margin-bottom: 8px;
+    }
+
     svg {
       display: block;
       margin: 0 auto;
+      width: auto;
+      height: 100%;
     }
   }
 
@@ -17,5 +28,9 @@
     color: $white;
     font-weight: 600;
     text-align: center;
+
+    @include max(md) {
+      font-size: 10px;
+    }
   }
 }
