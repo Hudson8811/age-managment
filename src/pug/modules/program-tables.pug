@@ -1,17 +1,17 @@
 section.program-tables
   .program-tables__container.container 
     h2.program-tables__title.title 
-      span Программы
+      span Цены
 
     .program-tables__tabs.tabs.swiper
       .swiper-wrapper
         each item, index in PROGRAM_TABLES_TABS
-          button.tabs__item.btn.btn--round(class= (index === 0 ? 'btn--active' : ''), type="button", data-target= item.target)!= item.text
+          button.tabs__item.btn.btn--round.swiper-slide(class= (index === 0 ? 'btn--active' : ''), type="button", data-target= item.target)!= item.text
     .program-tables__main
       +nav-btn('prev', 'program-tables__prev nav-btn--white')
       
       each table, index in PROGRAM_TABLES
-        .program-tables__table(class= (index === 0 ? 'program-tables__table--active table table--' + table.id : 'table table--' + table.id), id="table-" + table.id)
+        .program-tables__content(class= (index === 0 ? 'program-tables__content--active opacity table table--' + table.id : 'table table--' + table.id), id="table-" + table.id)
           .table__head
             .table__head-group
               each headSimpleCell in table.head.simple

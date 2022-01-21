@@ -101,10 +101,13 @@
         <div class="whatisit__container container">
           <div class="whatisit__aside">
             <div class="whatisit__aside-image"> <img src="images/whatisit-img.jpg" srcset="images/whatisit-img@2x.jpg 2x" width="562" height="668" alt="Яхницкий Георгий Георгевич"></div>
-            <div class="whatisit__aside-text"> <span>Получай удовольствия от&nbsp;жизни долго! Любовь, секс, вино и&nbsp;море до глубокой старости!</span><a class="whatisit__aside-text-play" href="#">
+            <div class="whatisit__aside-text"> <span>Получай удовольствия от&nbsp;жизни долго! Любовь, секс, вино и&nbsp;море до глубокой старости!</span>
+              <div class="whatisit__aside-text-play">
                 <svg width="49" height="57">
                   <use xlink:href="./images/sprite.svg#play"></use>
-                </svg></a></div>
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="whatisit__main">
             <h2 class="whatisit__main-title title title--line"> <span>Что это?</span></h2>
@@ -116,55 +119,7 @@
           </div>
         </div>
       </section>
-      <section class="longevity">
-        <div class="longevity__container container"> 
-          <h2 class="longevity__title title"> <span>Счастливое долголетие</span></h2>
-          <div class="longevity__formula">Формула Счастья: 6 «С» "С": <br>Солнце - Сон - Смех - Спорт - Секс - Социализация*.</div>
-          <div class="longevity__scheme">
-            <div class="longevity__scheme-aside longevity__scheme-aside--happiness">
-              <div class="longevity__scheme-aside-title">Счастье</div>
-              <div class="longevity__scheme-aside-arrow">
-                <svg width="8" height="696">
-                  <use xlink:href="./images/sprite.svg#long-arrow"></use>
-                </svg>
-              </div>
-              <div class="longevity__scheme-aside-text">Распределение усилий</div>
-            </div>
-            <div class="longevity__scheme-item">
-              <ul class="longevity__scheme-item-list">
-                <li>Гармония психики</li>
-                <li>Гармония отдыха и фитнеса</li>
-                <li>Гармония сна и дневной активности</li>
-                <li>Гармония белков/ жиров/ углеводов</li>
-                <li>Гармония витаминов и минералов</li>
-                <li>Гармония гармонов</li>
-              </ul>
-              <div class="longevity__scheme-item-title">Что должно <span>быть для счастья?</span></div>
-            </div>
-            <div class="longevity__scheme-item longevity__scheme-item--reverse">
-              <ul class="longevity__scheme-item-list">
-                <li>Получение промежуточного результата и оперделение новых целей</li>
-                <li>Формирование привычки</li>
-                <li>Обение иполнению рекомендаций</li>
-                <li>Рекомендации по питанию, режиму дня, физической активности</li>
-                <li>Коррекция гормональных нарушений</li>
-                <li>Обследования</li>
-              </ul>
-              <div class="longevity__scheme-item-title">Что нужно <span>делать для счастья?</span></div>
-            </div>
-            <div class="longevity__scheme-aside longevity__scheme-aside--duration">
-              <div class="longevity__scheme-aside-title">Продолжительность счастья</div>
-              <div class="longevity__scheme-aside-arrow">
-                <svg width="8" height="696">
-                  <use xlink:href="./images/sprite.svg#long-arrow"></use>
-                </svg>
-              </div>
-              <div class="longevity__scheme-aside-text">Застраты времени</div>
-            </div>
-          </div>
-          <div class="longevity__footnote">* по определению Клиники профессора Калинченко.</div>
-        </div>
-      </section>
+      <!--include ../modules/longevity-->
       <section class="wishmap">
         <div class="wishmap__container container">
           <div class="wishmap__grid">
@@ -451,18 +406,19 @@
         <div class="program-cards__container container">
           <div class="program-cards__tabs tabs swiper">
             <div class="swiper-wrapper">
-              <button class="tabs__item btn btn--round btn--active" type="button" data-target="program-card-result">Управление возрастом. Результат</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="program-card-habit">Управление возрастом. Привычка</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="program-card-learning">Управление возрастом. Обучение</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="program-card-recommendations">Управление возрастом. Рекомендации</button>
+              <button class="tabs__item btn btn--round swiper-slide btn--active" type="button" data-target="program-card-result"><span>Управление возрастом. </span>Результат</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="program-card-habit"><span>Управление возрастом. </span>Привычка</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="program-card-learning"><span>Управление возрастом. </span>Обучение</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="program-card-recommendations"><span>Управление возрастом. </span>Рекомендации</button>
             </div>
           </div>
           <div class="program-cards__main"> 
-            <div class="program-cards__content program-cards__content--active" id="program-card-result">
+            <div class="program-cards__content program-cards__content--active opacity" id="program-card-result">
               <div class="program-cards__card program-card">
                 <div class="program-card__main">
                   <div class="program-card__main-title"><span>Управление возрастом. Результат.</span> Включает в себя все этапы работы до получения результата.</div>
-                  <div class="program-card__main-result">Результат: Гармония гормонов-Сна-Питания-Физической активности-Психики</div>
+                  <div class="program-card__main-target">Обследование, постановка цели, составление рекомендаций, сопровождение в достижении цели, отработка знаний и навыков, формирование привычки, здоровые изменения психики, достижение промежуточной цели.</div>
+                  <div class="program-card__main-result"><b>Результат:</b> Гармония гормонов-Сна-Питания-Физической активности-Психики</div>
                   <ul class="program-card__main-list">
                     <li class="program-card__main-item">Изучите показатели своего здоровья</li>
                     <li class="program-card__main-item">Определите свою цель и получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности</li>
@@ -470,52 +426,71 @@
                     <li class="program-card__main-item">Увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</li>
                   </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
                 </div>
-                <div class="program-card__image"> <img src="images/program-card-img.jpg" srcset="images/program-card-img@2x.jpg 2x" width="555" height="721" alt="Яхницкий Георгий Георгевич в фитнес-зале"></div>
+                <div class="program-card__image">
+                  <picture>
+                    <source media="(max-width: 1269px)" srcset="images/program-card-img-1-mobile.jpg 1x, images/program-card-img-1-mobile@2x.jpg 2x"><img src="images/program-card-img-1.jpg" srcset="images/program-card-img-1@2x.jpg 2x" alt="Яхницкий Георгий Георгевич">
+                  </picture>
+                </div>
               </div>
             </div>
             <div class="program-cards__content" id="program-card-habit">
               <div class="program-cards__card program-card">
                 <div class="program-card__main">
-                  <div class="program-card__main-title"><span>Управление возрастом. Результат.</span> Включает в себя все этапы работы до получения результата.</div>
-                  <div class="program-card__main-result">Результат: Гармония гормонов-Сна-Питания-Физической активности-Психики</div>
+                  <div class="program-card__main-title"><span>Управление возрастом. Привычка.</span> Включает этапы коучинга включая формирование привычки.</div>
+                  <div class="program-card__main-target">Обследование, постановка цели, составление рекомендаций, сопровождение в достижении цели, отработка знаний и навыков, формирование привычки</div>
+                  <div class="program-card__main-result"><b>Результат:</b> Гармония гормонов-Сна-Питания-Физической активности.</div>
                   <ul class="program-card__main-list">
                     <li class="program-card__main-item">Изучите показатели своего здоровья</li>
-                    <li class="program-card__main-item">Определите свою цель и получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности</li>
-                    <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и сформируете привычку предупреждать болезни, соблюдать правила здорового питания, физической активности и психической деятельности</li>
-                    <li class="program-card__main-item">Увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</li>
+                    <li class="program-card__main-item">Определите свою цель</li>
+                    <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности, но</li>
+                    <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и</li>
+                    <li class="program-card__main-item">Сформируете привычку предупреждать болезни, соблюдать правила здорового питания и физической активности</li>
                   </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
                 </div>
-                <div class="program-card__image"> <img src="images/program-card-img.jpg" srcset="images/program-card-img@2x.jpg 2x" width="555" height="721" alt="Яхницкий Георгий Георгевич в фитнес-зале"></div>
+                <div class="program-card__image">
+                  <picture>
+                    <source media="(max-width: 1269px)" srcset="images/program-card-img-2-mobile.jpg 1x, images/program-card-img-2-mobile@2x.jpg 2x"><img src="images/program-card-img-2.jpg" srcset="images/program-card-img-2@2x.jpg 2x" alt="Яхницкий Георгий Георгевич">
+                  </picture>
+                </div>
               </div>
             </div>
             <div class="program-cards__content" id="program-card-learning">
               <div class="program-cards__card program-card">
                 <div class="program-card__main">
-                  <div class="program-card__main-title"><span>Управление возрастом. Результат.</span> Включает в себя все этапы работы до получения результата.</div>
-                  <div class="program-card__main-result">Результат: Гармония гормонов-Сна-Питания-Физической активности-Психики</div>
+                  <div class="program-card__main-title"><span>Управление возрастом. Обучение.</span> Включает этапы коучинга включая обучению образу жизни</div>
+                  <div class="program-card__main-target">Обследование, постановка цели, составление рекомендаций, сопровождение в достижении цели, отработка знаний и навыков</div>
+                  <div class="program-card__main-result"><b>Результат</b>: навыки достижения Гармония гормонов-Сна-Питания-Физической активности</div>
                   <ul class="program-card__main-list">
                     <li class="program-card__main-item">Изучите показатели своего здоровья</li>
-                    <li class="program-card__main-item">Определите свою цель и получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности</li>
-                    <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и сформируете привычку предупреждать болезни, соблюдать правила здорового питания, физической активности и психической деятельности</li>
-                    <li class="program-card__main-item">Увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</li>
+                    <li class="program-card__main-item">Определите свою цель</li>
+                    <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности, но</li>
+                    <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности.</li>
                   </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
                 </div>
-                <div class="program-card__image"> <img src="images/program-card-img.jpg" srcset="images/program-card-img@2x.jpg 2x" width="555" height="721" alt="Яхницкий Георгий Георгевич в фитнес-зале"></div>
+                <div class="program-card__image">
+                  <picture>
+                    <source media="(max-width: 1269px)" srcset="images/program-card-img-3-mobile.jpg 1x, images/program-card-img-3-mobile@2x.jpg 2x"><img src="images/program-card-img-3.jpg" srcset="images/program-card-img-3@2x.jpg 2x" alt="Яхницкий Георгий Георгевич">
+                  </picture>
+                </div>
               </div>
             </div>
             <div class="program-cards__content" id="program-card-recommendations">
               <div class="program-cards__card program-card">
                 <div class="program-card__main">
-                  <div class="program-card__main-title"><span>Управление возрастом. Результат.</span> Включает в себя все этапы работы до получения результата.</div>
-                  <div class="program-card__main-result">Результат: Гармония гормонов-Сна-Питания-Физической активности-Психики</div>
+                  <div class="program-card__main-title"><span>Управление возрастом. Рекомендации.</span> Включает этапы коучинга включая получение рекомендации.</div>
+                  <div class="program-card__main-target">Обследование, постановка цели, составление рекомендаций.</div>
+                  <div class="program-card__main-result"><b>Результат:</b> знания о Гармония гомонов-Сна-Питания-Физической активности</div>
                   <ul class="program-card__main-list">
                     <li class="program-card__main-item">Изучите показатели своего здоровья</li>
-                    <li class="program-card__main-item">Определите свою цель и получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности</li>
-                    <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и сформируете привычку предупреждать болезни, соблюдать правила здорового питания, физической активности и психической деятельности</li>
-                    <li class="program-card__main-item">Увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</li>
+                    <li class="program-card__main-item">Определите свою цель</li>
+                    <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</li>
                   </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
                 </div>
-                <div class="program-card__image"> <img src="images/program-card-img.jpg" srcset="images/program-card-img@2x.jpg 2x" width="555" height="721" alt="Яхницкий Георгий Георгевич в фитнес-зале"></div>
+                <div class="program-card__image">
+                  <picture>
+                    <source media="(max-width: 1269px)" srcset="images/program-card-img-4-mobile.jpg 1x, images/program-card-img-4-mobile@2x.jpg 2x"><img src="images/program-card-img-4.jpg" srcset="images/program-card-img-4@2x.jpg 2x" alt="Яхницкий Георгий Георгевич">
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
@@ -525,10 +500,10 @@
         <div class="program-detail__container container">
           <div class="program-detail__tabs tabs swiper">
             <div class="swiper-wrapper">
-              <button class="tabs__item btn btn--round btn--white btn--active" type="button" data-target="program-detail-result">Управление возрастом. Результат</button>
-              <button class="tabs__item btn btn--round btn--white" type="button" data-target="program-detail-habit">Управление возрастом. Привычка</button>
-              <button class="tabs__item btn btn--round btn--white" type="button" data-target="program-detail-learning">Управление возрастом. Обучение</button>
-              <button class="tabs__item btn btn--round btn--white" type="button" data-target="program-detail-recommendations">Управление возрастом. Рекомендации</button>
+              <button class="tabs__item btn btn--round btn--white swiper-slide btn--active" type="button" data-target="program-detail-result"><span>Управление возрастом. </span>Результат</button>
+              <button class="tabs__item btn btn--round btn--white swiper-slide" type="button" data-target="program-detail-habit"><span>Управление возрастом. </span>Привычка</button>
+              <button class="tabs__item btn btn--round btn--white swiper-slide" type="button" data-target="program-detail-learning"><span>Управление возрастом. </span>Обучение</button>
+              <button class="tabs__item btn btn--round btn--white swiper-slide" type="button" data-target="program-detail-recommendations"><span>Управление возрастом. </span>Рекомендации</button>
             </div>
           </div>
           <div class="program-detail__main">
@@ -537,149 +512,157 @@
                 <use xlink:href="./images/sprite.svg#prev"></use>
               </svg>
             </button>
-            <div class="program-detail__content program-detail__content--active" id="program-detail-result">
+            <div class="program-detail__content program-detail__content--active opacity" id="program-detail-result">
               <div class="program-detail__head"> 
                 <div class="program-detail__head-title">Управление возрастом. Результат</div>
                 <div class="program-detail__head-text">Программа включает в себя 71 встречу на протяжении 12 месяцев ( из них 23 консультативных и 48 фитнес-встреч)</div>
               </div>
-              <ul class="program-detail__list"> 
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Изучение своего организма</div>
-                  <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Постановку персональной цели</div>
-                  <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Рекомендации по достижению цели</div>
-                  <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
-                  <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Формирование здоровых привычек</div>
-                  <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Обучение</div>
-                  <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
-                  <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
-                </li>
-              </ul>
+              <div class="program-detail__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Изучение своего организма</div>
+                    <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Постановку персональной цели</div>
+                    <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Рекомендации по достижению цели</div>
+                    <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
+                    <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Формирование здоровых привычек</div>
+                    <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Обучение</div>
+                    <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
+                    <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="program-detail__content" id="program-detail-habit">
               <div class="program-detail__head"> 
                 <div class="program-detail__head-title">Управление возрастом. Привычка</div>
                 <div class="program-detail__head-text">Программа включает в себя 71 встречу на протяжении 12 месяцев ( из них 23 консультативных и 48 фитнес-встреч)</div>
               </div>
-              <ul class="program-detail__list"> 
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Изучение своего организма</div>
-                  <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Постановку персональной цели</div>
-                  <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Рекомендации по достижению цели</div>
-                  <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
-                  <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Формирование здоровых привычек</div>
-                  <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Обучение</div>
-                  <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
-                  <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
-                </li>
-              </ul>
+              <div class="program-detail__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Изучение своего организма</div>
+                    <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Постановку персональной цели</div>
+                    <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Рекомендации по достижению цели</div>
+                    <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
+                    <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Формирование здоровых привычек</div>
+                    <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Обучение</div>
+                    <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
+                    <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="program-detail__content" id="program-detail-learning">
               <div class="program-detail__head"> 
                 <div class="program-detail__head-title">Управление возрастом. Обучение</div>
                 <div class="program-detail__head-text">Программа включает в себя 71 встречу на протяжении 12 месяцев ( из них 23 консультативных и 48 фитнес-встреч)</div>
               </div>
-              <ul class="program-detail__list"> 
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Изучение своего организма</div>
-                  <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Постановку персональной цели</div>
-                  <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Рекомендации по достижению цели</div>
-                  <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
-                  <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Формирование здоровых привычек</div>
-                  <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Обучение</div>
-                  <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
-                  <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
-                </li>
-              </ul>
+              <div class="program-detail__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Изучение своего организма</div>
+                    <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Постановку персональной цели</div>
+                    <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Рекомендации по достижению цели</div>
+                    <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
+                    <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Формирование здоровых привычек</div>
+                    <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Обучение</div>
+                    <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
+                    <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="program-detail__content" id="program-detail-recommendations">
               <div class="program-detail__head"> 
                 <div class="program-detail__head-title">Управление возрастом. Рекомендации</div>
                 <div class="program-detail__head-text">Программа включает в себя 71 встречу на протяжении 12 месяцев ( из них 23 консультативных и 48 фитнес-встреч)</div>
               </div>
-              <ul class="program-detail__list"> 
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Изучение своего организма</div>
-                  <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Постановку персональной цели</div>
-                  <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Рекомендации по достижению цели</div>
-                  <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
-                  <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Формирование здоровых привычек</div>
-                  <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Обучение</div>
-                  <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
-                </li>
-                <li class="program-detail__item">
-                  <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
-                  <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
-                </li>
-              </ul>
+              <div class="program-detail__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Изучение своего организма</div>
+                    <div class="program-detail__item-text">Оценка истории жизни; физикальное/лабораторное/инструментальное обследование; при необходимости осмотр гинеколога/уролога/эндокринолога для выявления возрастных гормональных нарушений)</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Постановку персональной цели</div>
+                    <div class="program-detail__item-text">Цель должна быть определена по SMART - конкретная (Specific), измеримая (Measurable), достижимая (Achievable), актуальная (Relevant), определенная по срокам достижения (Time bound).</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Рекомендации по достижению цели</div>
+                    <div class="program-detail__item-text">Письменные рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Сопровождение в выполнении рекомендаций и достижении цели</div>
+                    <div class="program-detail__item-text">Наблюдение за динамикой показателей здоровья, контроль эффективности лекарственной терапии и приема БАД, контроль питания, физической активности, коррекция и адаптация рекомендаций</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Формирование здоровых привычек</div>
+                    <div class="program-detail__item-text">В процессе регулярного исполнения полученных рекомендаций под присмотром коуча появится привычка к здоровому образу жизни</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Обучение</div>
+                    <div class="program-detail__item-text">Пониманию работы своего тела, наблюдению на жизненными показателями организма, правилам питания и физической активности</div>
+                  </div>
+                  <div class="program-detail__item swiper-slide">
+                    <div class="program-detail__item-title">Оценка достижения цели, поставка следующей промежуточной цели.</div>
+                    <div class="program-detail__item-text">По окончании программы Вы увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <button class="program-detail__next nav-btn--white nav-btn nav-btn--next" type="button" aria-label="next">
               <svg width="16" height="28">
@@ -748,13 +731,13 @@
       </section>
       <section class="program-tables">
         <div class="program-tables__container container"> 
-          <h2 class="program-tables__title title"> <span>Программы</span></h2>
+          <h2 class="program-tables__title title"> <span>Цены</span></h2>
           <div class="program-tables__tabs tabs swiper">
             <div class="swiper-wrapper">
-              <button class="tabs__item btn btn--round btn--active" type="button" data-target="table-offline">Управление возрастом Offline</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="table-online">Управление возрастом Online</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="table-additional">Дополнительные обследования, анализы</button>
-              <button class="tabs__item btn btn--round" type="button" data-target="table-payment">Варианты оплаты</button>
+              <button class="tabs__item btn btn--round swiper-slide btn--active" type="button" data-target="table-offline">Управление возрастом Offline</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="table-online">Управление возрастом Online</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="table-additional">Дополнительные обследования, анализы</button>
+              <button class="tabs__item btn btn--round swiper-slide" type="button" data-target="table-payment">Варианты оплаты</button>
             </div>
           </div>
           <div class="program-tables__main">
@@ -763,7 +746,7 @@
                 <use xlink:href="./images/sprite.svg#prev"></use>
               </svg>
             </button>
-            <div class="program-tables__table program-tables__table--active table table--offline" id="table-offline">
+            <div class="program-tables__content program-tables__content--active opacity table table--offline" id="table-offline">
               <div class="table__head">
                 <div class="table__head-group">
                   <div class="table__head-cell"><span>Программы</span></div>
@@ -833,7 +816,7 @@
                 <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="program-tables__table table table--online" id="table-online">
+            <div class="program-tables__content table table--online" id="table-online">
               <div class="table__head">
                 <div class="table__head-group">
                   <div class="table__head-cell"><span>Программы</span></div>
@@ -908,7 +891,7 @@
                 <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="program-tables__table table table--additional" id="table-additional">
+            <div class="program-tables__content table table--additional" id="table-additional">
               <div class="table__head">
                 <div class="table__head-group">
                   <div class="table__head-cell"><span>Программы</span></div>
@@ -983,7 +966,7 @@
                 <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="program-tables__table table table--payment" id="table-payment">
+            <div class="program-tables__content table table--payment" id="table-payment">
               <div class="table__head">
                 <div class="table__head-group">
                   <div class="table__head-cell"><span>Программы</span></div>
@@ -1065,7 +1048,8 @@
         </div>
       </section>
       <section class="certificates">
-        <div class="certificates__container container"> 
+        <div class="certificates__container container">
+          <h2 class="certificates__title title"> <span>Мое образование</span></h2>
           <div class="certificates__slider">
             <div class="swiper"> 
               <div class="swiper-wrapper">

@@ -1,6 +1,10 @@
 .but {
   padding: 50px 0 70px;
 
+  @include max(sm) {
+    padding: 50px 0 35px;
+  }
+
   &__container {
   }
 

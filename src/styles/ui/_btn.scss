@@ -19,6 +19,15 @@
 
   transition: background-color $transition, color $transition;
 
+  @include max(xs) {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 4px;
+  }
+
   @include hover {
     color: $white;
     background-color: $blue-11;

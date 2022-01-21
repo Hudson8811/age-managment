@@ -9,7 +9,10 @@ window.addEventListener('load', () => {
   
   const coachingProgramsSliderElement = document.querySelector('.coaching-programs__slider.swiper');
 
-  console.log(coachingProgramsSliderElement)
+  const programDetailSliderElements = document.querySelectorAll('.program-detail__slider');
+
+  const costSliderElement = document.querySelector('.cost__slider.swiper ');
+
 
 
   if (wishmapSliderElement) {
@@ -87,28 +90,23 @@ window.addEventListener('load', () => {
   if (certificatesSliderElement) {
     const certificatesSlider = new Swiper(certificatesSliderElement, {
       speed: 400,
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 48,
       loop: true,
-      centeredSlides: true,
       // Responsive breakpoints
-      /*breakpoints: {
+      breakpoints: {
         // when window width is >= 320px
         320: {
-          slidesPerView: 2,
-          spaceBetween: 20
+          slidesPerView: 1,
+          spaceBetween: 48
         },
-        // when window width is >= 480px
-        480: {
+        // when window width is >= 1270px
+        1270: {
           slidesPerView: 3,
-          spaceBetween: 30
-        },
-        // when window width is >= 640px
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 40
+          spaceBetween: 48,
+          centeredSlides: true
         }
-      }*/
+      },
 
       // If we need pagination
       pagination: {
@@ -148,4 +146,56 @@ window.addEventListener('load', () => {
     init();
     window.addEventListener('resize', init);
   }
+
+  if (programDetailSliderElements.length) {
+    const programDetailSlider = new Set();
+
+    const init = () => {
+      if (html.clientWidth < 768 && programDetailSlider.size === 0) {
+
+        programDetailSliderElements.forEach((element) => {
+          const slider = new Swiper(element, {
+            speed: 400,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            loop: true
+          });
+
+          programDetailSlider.add(slider);
+        })
+        
+      } else if (html.clientWidth >= 768 && programDetailSlider.size) {
+        [...programDetailSlider].forEach((slider) => {
+          slider.destroy();
+          programDetailSlider.delete(slider)
+        });
+      }
+    }
+
+    init();
+    window.addEventListener('resize', init);
+  }
+
+  
+  if (costSliderElement) {
+    let costSlider = null;
+
+    const init = () => {
+      if (html.clientWidth < 768 && !costSlider) {
+        costSlider = new Swiper(costSliderElement, {
+          speed: 400,
+          slidesPerView: 'auto',
+          spaceBetween: 13,
+          loop: true
+        });
+      } else if (html.clientWidth >= 768 && costSlider instanceof Swiper) {
+        costSlider.destroy();
+        costSlider = null;
+      }
+    }
+
+    init();
+    window.addEventListener('resize', init);
+  }
+
 });

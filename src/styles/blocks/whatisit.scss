@@ -1,9 +1,22 @@
 .whatisit {
   padding: 74px 0 60px;
 
+  @include max(sm) {
+    padding: 38px 0 60px;
+  }
+
   &__container {
     display: flex;
     max-width: 1406px;
+
+    @include max(lg) {
+      max-width: 990px;
+    }
+
+    @include max(md) {
+      display: block;
+      max-width: 768px;
+    }
   }
 
   &__aside {
@@ -12,11 +25,44 @@
     width: 100%;
     max-width: 690px;
 
+    @include max(lg) {
+      width: calc(100% - 440px);
+      padding-right: 65px;
+      flex-shrink: 0;
+    }
+
+    @include max(md) {
+      display: block;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 60px;
+      padding-right: 0;
+    }
+
+    @include max(md) {
+      margin-bottom: 28px;
+    }
+
     &-image {
       width: 562px;
       margin-left: -10px;
       flex-shrink: 0;
       align-self: flex-start;
+
+      @include max(lg) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      @include max(md) {
+        max-width: 400px;
+        margin: 0 auto 42px;
+        padding: 0 2px;
+      }
+
+      @include max(xs) {
+        margin-bottom: 32px;
+      }
 
       img {
         display: block;
@@ -35,6 +81,17 @@
       flex-direction: column;
       width: 180px;
 
+      @include max(lg) {
+        right: 0;
+      }
+
+      @include max(md) {
+        position: relative;
+        flex-direction: row-reverse;
+
+        width: 100%;
+      }
+
       &::after {
         content: "";
         width: 1px;
@@ -42,6 +99,13 @@
         margin-left: auto;
         flex-grow: 1;
         background-color: $brown;
+
+        @include max(md) {
+          position: relative;
+          top: -4px;
+          width: auto;
+          height: 1px;
+        }
       }
 
       span {
@@ -50,6 +114,19 @@
         line-height: 1.25;
         font-weight: 700;
         text-align: right;
+
+        @include max(md) {
+          max-width: 50%;
+          margin-right: 4px;
+          margin-left: 36px;
+          text-align: left;
+        }
+
+        @include max(xs) {
+          max-width: 136px;
+          font-size: 10px;
+          line-height: 1.219;
+        }
       }
 
       &-play {
@@ -60,6 +137,19 @@
         width: 49px;
         margin-left: auto;
         margin-bottom: -57px;
+
+        @include max(md) {
+          top: 0;
+          left: 0;
+          margin-left: -60px;
+          margin-bottom: 0;
+        }
+
+        @include max(md) {
+          top: 0;
+          width: 40px;
+          margin-left: -53px;
+        }
 
         svg {
           display: block;
@@ -75,17 +165,42 @@
     max-width: 540px;
     margin-left: 75px;
 
+    @include max(lg) {
+      width: 375px;
+      margin-left: 65px;
+    }
+
+    @include max(md) {
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+    }
+
     &-title {
       margin-bottom: 33px;
+
+      @include max(xs) {
+        margin-bottom: 25px;
+      }
     }
 
     &-subtitle {
-      max-width: 300px;
+      max-width: 330px;
       margin-bottom: 33px;
       font-size: 36px;
       line-height: 1.268888888888889;
       color: $blue-11;
       font-weight: 700;
+
+      @include max(md) {
+        max-width: none;
+      }
+
+      @include max(xs) {
+        margin-bottom: 26px;
+        font-size: 28px;
+        line-height: 1.268928571428571;
+      }
     }
 
     &-text {
@@ -95,19 +210,44 @@
       line-height: 1.288888888888889;
       color: $blue-11;
 
+      @include max(md) {
+        max-width: none;
+      }
+
+      @include max(xs) {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.219285714285714;
+        font-weight: 300;
+      }
+
       p {
         margin: 0;
       }
 
       p + p {
         margin-top: 22px;
+
+        @include max(xs) {
+          margin-top: 17px;
+        }
       }
 
-      b {
+      b,
+      strong {
+        @include max(xs) {
+          font-weight: 600;
+        }
       }
     }
 
     &-btn {
+      @include max(xs) {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
     }
   }
 }

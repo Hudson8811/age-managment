@@ -1,5 +1,5 @@
 .cost {
-  padding-bottom: 58px;
+  padding: 29px 0 58px;
 
   &__container {
   }
@@ -9,10 +9,24 @@
   }
 
   &__slider {
-    .swiper-slider {
+    overflow: visible;
+
+    @include max(sm) {
+      overflow: hidden;
+      width: calc(100% + 26px);
+      margin-left: -11px;
+      padding: 11px;
+    }
+
+    .swiper-wrapper {
       flex-wrap: wrap;
       margin-top: -13px;
       margin-left: -13px;
+
+      @include max(sm) {
+        flex-wrap: nowrap;
+        margin: 0;
+      }
     }
   }
 
@@ -21,5 +35,14 @@
     height: auto;
     margin-left: 13px;
     margin-top: 13px;
+
+    @include max(lg) {
+      width: calc(33.33% - 13px);
+    }
+
+    @include max(sm) {
+      width: 196px;
+      margin: 0;
+    }
   }
 }

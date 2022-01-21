@@ -11,3 +11,4 @@
 //= ./partials/form.js
 //= ./partials/menu.js
 //= ./partials/steps.js
+//= ./partials/tabs.js

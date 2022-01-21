@@ -31,6 +31,10 @@
     margin-right: 42px;
 
     @include max(md) {
+      margin-right: auto;
+    }
+
+    @include max(md) {
       height: 34px;
 
       img {
@@ -45,6 +49,10 @@
     display: flex;
     margin-right: auto;
     align-self: center;
+
+    @include max(md) {
+      margin-right: 0;
+    }
 
     &-item {
       display: block;

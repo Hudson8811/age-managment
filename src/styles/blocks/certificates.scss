@@ -1,7 +1,16 @@
 .certificates {
   padding: 87px 0 140px;
 
+  @include max(sm) {
+  }
+
   &__container {
+  }
+
+  &__title {
+    @include max(sm) {
+      margin-bottom: 24px;
+    }
   }
 
   &__slider {
@@ -11,6 +20,10 @@
 
     .swiper {
       padding: 48px 0;
+
+      @include max(sm) {
+        padding: 0;
+      }
     }
 
     &-nav {
@@ -23,18 +36,32 @@
       width: 100%;
       height: 0;
 
+      @include max(sm) {
+        display: none;
+      }
+
       .nav-btn {
         transform: translateY(-50%);
       }
     }
   }
+
   &__pagination {
     position: absolute;
     bottom: 0 !important;
+
+    @include max(sm) {
+      position: static;
+      margin-top: 16px;
+    }
   }
 
   &__item {
     height: 265px;
+
+    @include max(sm) {
+      height: auto;
+    }
 
     img {
       display: block;
@@ -45,6 +72,15 @@
 
       transform: scale(0.68679);
       transition: transform $transition;
+
+      @include max(lg) {
+        transform: none;
+      }
+
+      @include max(sm) {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     &.swiper-slide-active,

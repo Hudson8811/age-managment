@@ -5,6 +5,10 @@
   padding: 437px 0 69px;
   background-color: $blue-11;
 
+  @include max(sm) {
+    padding: 330px 0 98px;
+  }
+
   @include max(xs) {
     padding: 235px 0 98px;
   }

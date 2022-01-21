@@ -556,7 +556,8 @@
         opacity: 0.5;
         transition: opacity $transition;
 
-        &.swiper-slide-active {
+        &.swiper-slide-active,
+        &.swiper-slide-active + &.swiper-slide-next:last-child {
           opacity: 1;
         }
       }

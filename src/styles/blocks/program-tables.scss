@@ -54,23 +54,30 @@
     transform: translateX(-50%);
   }
 
-  &__table {
+  &__content {
     //width: calc(100% - 160px);
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    //left: 50%;
+    //transform: translateX(-50%);
     opacity: 0;
     pointer-events: none;
-    width: calc(100% - 160px);
+    //width: calc(100% - 160px);
+    width: 100%;
 
     &--active {
       position: static;
-      transform: translateX(0);
-      opacity: 1;
+      //transform: translateX(0);
       pointer-events: auto;
-      width: 100%;
       margin: 0 auto;
+    }
+
+    &.opacity {
+      opacity: 1;
+    }
+
+    &.animate {
+      transition: opacity $transition;
     }
   }
 }

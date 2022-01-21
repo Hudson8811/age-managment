@@ -5,12 +5,20 @@
     overflow: hidden;
   }
 
+  @include max(sm) {
+    padding-top: 90px;
+  }
+
   &__container {
   }
 
   &__title {
     max-width: 730px;
     margin: 0 auto 70px;
+
+    @include max(sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__form {

@@ -3,12 +3,22 @@
   z-index: 1;
   padding: 28px 0 70px;
 
+  @include max(sm) {
+    padding: 42px 0 70px;
+  }
+
   &__container {
   }
 
   &__tabs {
     margin-top: -10px;
     margin-bottom: 34px;
+
+    @include max(sm) {
+      width: calc(100% + 15px);
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
   }
 
   &__main {
@@ -18,23 +28,35 @@
   &__content {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0; //50%;
+    //transform: translateX(-50%);
     opacity: 0;
     pointer-events: none;
-    width: calc(100% - 160px);
+    width: 100%; //calc(100% - 160px);
 
     &--active {
       position: static;
-      transform: translateX(0);
-      opacity: 1;
+      //transform: translateX(0);
+      //opacity: 1;
       pointer-events: auto;
       width: 100%;
       margin: 0 auto;
+    }
+
+    &.opacity {
+      opacity: 1;
+    }
+
+    &.animate {
+      transition: opacity $transition;
     }
   }
 }
 
 .program-cards + .program-detail {
   margin-top: -295px;
+
+  @include max(xs) {
+    margin-top: -310px;
+  }
 }

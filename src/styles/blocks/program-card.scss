@@ -3,9 +3,29 @@
   box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15);
   background-color: $white;
 
+  @include max(lg) {
+    flex-direction: column-reverse;
+  }
+
+  @include max(xs) {
+    box-shadow: 0px 0px 6.82709px rgba(0, 0, 0, 0.15);
+  }
+
   &__main {
     width: calc(100% - 555px);
     padding: 66px 60px 66px 67px;
+
+    @include max(lg) {
+      width: 100%;
+    }
+
+    @include max(sm) {
+      padding: 48px;
+    }
+
+    @include max(xs) {
+      padding: 18px 14px 16px;
+    }
 
     &-title {
       max-width: 515px;
@@ -14,9 +34,36 @@
       line-height: 1.268928571428571;
       color: $blue-11;
 
+      @include max(xs) {
+        margin-bottom: 13px;
+        font-size: 14px;
+        line-height: 1.219285714285714;
+      }
+
       span {
         display: block;
         font-weight: 700;
+
+        @include max(xs) {
+          margin-bottom: 18px;
+          font-size: 20px;
+          line-height: 1.269;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-target {
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: 1.57375;
+      color: $brown;
+      font-weight: 700;
+
+      @include max(xs) {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.574285714285714;
       }
     }
 
@@ -25,11 +72,20 @@
       font-size: 16px;
       line-height: 1.57375;
       color: $brown;
-      font-weight: 700;
+
+      @include max(xs) {
+        margin-bottom: 19px;
+        font-size: 14px;
+        line-height: 1.574285714285714;
+      }
     }
 
-    &-list {
-      margin-bottom: 32px !important;
+    &-btn {
+      margin-top: 32px;
+
+      @include max(xs) {
+        margin-top: 18px;
+      }
     }
 
     &-item {
@@ -39,6 +95,13 @@
       font-size: 14px;
       line-height: 1.219285714285714;
       color: $blue-11;
+
+      @include max(xs) {
+        min-height: 18px;
+        padding-left: 18px;
+        font-size: 12px;
+        line-height: 1.219166666666667;
+      }
 
       & + & {
         margin-top: 8px;
@@ -55,6 +118,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='23' viewBox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12' cy='11.5' r='10.35' stroke='%23112F59' stroke-width='2.3'/%3e%3cpath d='m6.25 11.883 4.31 4.641a.767.767 0 0 0 1.207-.108l5.6-8.75' stroke='%23112F59' stroke-width='2.3' stroke-linecap='round'/%3e%3c/svg%3e");
+
+        @include max(xs) {
+          width: 11px;
+          height: 11px;
+        }
       }
     }
   }
@@ -62,6 +130,10 @@
   &__image {
     width: 100%;
     max-width: 555px;
+
+    @include max(lg) {
+      max-width: none;
+    }
 
     img {
       display: block;

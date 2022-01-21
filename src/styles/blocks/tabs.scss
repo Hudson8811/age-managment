@@ -1,13 +1,32 @@
 .tabs {
   overflow: visible;
 
+  @include max(sm) {
+    overflow: hidden;
+  }
+
   .swiper-wrapper {
     flex-wrap: wrap;
     justify-content: center;
+
+    @include max(sm) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
   }
 
   &__item {
+    width: auto;
     margin: 8px;
+
+    @include max(sm) {
+      width: auto;
+      margin: 0;
+
+      span {
+        display: none;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
