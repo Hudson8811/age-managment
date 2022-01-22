@@ -2,6 +2,10 @@
   $self: &;
   background-color: $white;
 
+  @include max(lg) {
+    display: flex;
+  }
+
   &__head {
     $head: &;
     display: flex;
@@ -10,12 +14,40 @@
     border-radius: 4px;
     background-color: $blue-11;
 
+    @include max(lg) {
+      display: block;
+      padding: 0;
+      //flex-direction: column;
+      width: 50%;
+      max-width: 300px;
+      margin-right: -1px;
+      flex-shrink: 0;
+      border-right: solid 1px $grey-ba;
+      background-color: $white;
+    }
+
+    @include max(sm) {
+      max-width: none;
+    }
+
     &-group {
       display: flex;
       flex-grow: 1;
 
+      @include max(lg) {
+        flex-direction: column;
+      }
+
       #{$head}-cell {
         width: 33.33%;
+
+        @include max(lg) {
+          width: 100%;
+
+          &:nth-child(odd) {
+            background-color: rgba($grey-aa, 0.44);
+          }
+        }
       }
     }
 
@@ -25,30 +57,80 @@
       padding: 0 20px;
       font-size: 12px;
       line-height: 1.219166666666667;
+      letter-spacing: 1px;
       color: $white;
       font-weight: 600;
       text-transform: uppercase;
       flex-grow: 1;
 
+      @include max(lg) {
+        padding: 20px 12px 20px 16px;
+        color: $blue-11;
+      }
+
       &--composite {
         display: block;
         padding: 0 10px;
         font-size: 9px;
+
+        @include max(lg) {
+          display: flex;
+          padding: 0;
+        }
       }
 
       &--composite-online {
         max-width: 34.5%;
 
+        @include max(lg) {
+          width: 100%;
+          max-width: none;
+        }
+
         #{$cell}-part {
           width: 25%;
+
+          @include max(lg) {
+            width: 100%;
+
+            &:nth-child(even) {
+              background-color: rgba($grey-aa, 0.44);
+            }
+          }
         }
       }
 
       &--composite-offline {
         max-width: 30.5%;
 
+        @include max(lg) {
+          width: 100%;
+          max-width: none;
+        }
+
         #{$cell}-part {
           width: 33.33%;
+
+          @include max(lg) {
+            width: 100%;
+
+            &:nth-child(even) {
+              background-color: rgba($grey-aa, 0.44);
+            }
+          }
+        }
+      }
+
+      &--composite-offline + &--composite-online {
+        #{$cell}-part {
+          @include max(lg) {
+            &:nth-child(even) {
+              background-color: $white;
+            }
+            &:nth-child(odd) {
+              background-color: rgba($grey-aa, 0.44);
+            }
+          }
         }
       }
 
@@ -58,10 +140,24 @@
         padding: 0 0 5px;
         border-bottom: solid 1px rgba($white, 0.5);
         text-align: center;
+
+        @include max(lg) {
+          width: auto;
+          margin: 0;
+          padding: 5px;
+          border: none;
+          writing-mode: vertical-lr;
+          background-color: rgba($grey-aa, 0.44);
+        }
       }
 
       &-row {
         display: flex;
+
+        @include max(lg) {
+          width: 100%;
+          flex-direction: column;
+        }
       }
 
       &-part {
@@ -69,8 +165,17 @@
         padding: 0 10px;
         flex-grow: 1;
 
+        @include max(lg) {
+          width: 100%;
+          font-size: 12px;
+        }
+
         & + & {
           border-left: solid 1px rgba($white, 0.5);
+
+          @include max(lg) {
+            border: none;
+          }
         }
 
         span {
@@ -91,22 +196,52 @@
   &__body {
     padding: 10px 10px;
 
+    @include max(lg) {
+      padding: 0;
+    }
+
     .swiper-wrapper {
       flex-wrap: wrap;
+
+      @include max(lg) {
+        flex-wrap: nowrap;
+      }
     }
   }
 
   &__row {
     display: flex;
+
+    @include max(lg) {
+      display: block;
+      width: 50%;
+      height: auto;
+      flex-grow: 1;
+      //flex-direction: column;
+
+      & + & {
+        border-left: solid 1px $grey-ba;
+      }
+    }
   }
 
   &__group-cells {
     display: flex;
     flex-grow: 1;
 
+    @include max(lg) {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     #{$self}__cell {
       width: 33.33%;
       flex-shrink: 0;
+
+      @include max(lg) {
+        width: 100%;
+      }
     }
   }
 
@@ -120,6 +255,14 @@
     line-height: 1.5;
     color: $blue-11;
 
+    @include max(lg) {
+      padding: 20px 12px 20px 16px;
+
+      &:nth-child(odd) {
+        background-color: rgba($grey-aa, 0.44);
+      }
+    }
+
     &:first-child {
       b {
         font-weight: 600;
@@ -131,21 +274,55 @@
       width: 100%;
       padding: 0 10px;
       flex-shrink: 0;
+
+      @include max(lg) {
+        display: block;
+        padding: 0;
+      }
     }
 
     &--composite-online {
       max-width: 34.5%;
 
+      @include max(lg) {
+        max-width: none;
+      }
+
       #{$cell}-part {
         width: 25%;
+
+        @include max(lg) {
+          width: 100%;
+        }
       }
     }
 
     &--composite-offline {
       max-width: 30.5%;
 
+      @include max(lg) {
+        max-width: none;
+      }
+
       #{$cell}-part {
         width: 33.33%;
+
+        @include max(lg) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--composite-offline + &--composite-online {
+      #{$cell}-part {
+        @include max(lg) {
+          &:nth-child(even) {
+            background-color: $white !important;
+          }
+          /*&:nth-child(odd) {
+            background-color: rgba($grey-aa, 0.44) !important;
+          }*/
+        }
       }
     }
 
@@ -158,6 +335,14 @@
       justify-content: center;
       padding: 0 10px;
       flex-grow: 1;
+
+      @include max(lg) {
+        padding: 20px 12px 20px 16px;
+
+        &:nth-child(even) {
+          background-color: rgba($grey-aa, 0.44);
+        }
+      }
 
       span {
         align-self: center;

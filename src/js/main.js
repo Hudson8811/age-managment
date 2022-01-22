@@ -12,3 +12,4 @@
 //= ./partials/menu.js
 //= ./partials/steps.js
 //= ./partials/tabs.js
+//= ./partials/tables.js

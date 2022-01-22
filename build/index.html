@@ -119,7 +119,61 @@
           </div>
         </div>
       </section>
-      <!--include ../modules/longevity-->
+      <section class="longevity">
+        <div class="longevity__container container"> 
+          <h2 class="longevity__title title"> <span>Счастливое долголетие</span></h2>
+          <div class="longevity__formula">Формула Счастья: 6 «С» "С": <br>Солнце - Сон - Смех - Спорт - Секс - Социализация*.</div>
+          <div class="longevity__scheme">
+            <div class="longevity__scheme-aside longevity__scheme-aside--happiness">
+              <div class="longevity__scheme-aside-title">Счастье</div>
+              <div class="longevity__scheme-aside-arrow">
+                <svg width="8" height="696">
+                  <use xlink:href="./images/sprite.svg#long-arrow"></use>
+                </svg>
+                <svg class="h" width="289" height="4">
+                  <use xlink:href="./images/sprite.svg#long-arrow-h"></use>
+                </svg>
+              </div>
+              <div class="longevity__scheme-aside-text">Распределение усилий</div>
+            </div>
+            <div class="longevity__scheme-item">
+              <ul class="longevity__scheme-item-list">
+                <li>Гармония психики</li>
+                <li>Гармония отдыха и фитнеса</li>
+                <li>Гармония сна и дневной активности</li>
+                <li>Гармония белков/ жиров/ углеводов</li>
+                <li>Гармония витаминов и минералов</li>
+                <li>Гармония гармонов</li>
+              </ul>
+              <div class="longevity__scheme-item-title">Что должно <span>быть для счастья?</span></div>
+            </div>
+            <div class="longevity__scheme-item longevity__scheme-item--reverse">
+              <ul class="longevity__scheme-item-list">
+                <li>Получение промежуточного результата и оперделение новых целей</li>
+                <li>Формирование привычки</li>
+                <li>Обение иполнению рекомендаций</li>
+                <li>Рекомендации по питанию, режиму дня, физической активности</li>
+                <li>Коррекция гормональных нарушений</li>
+                <li>Обследования</li>
+              </ul>
+              <div class="longevity__scheme-item-title">Что нужно <span>делать для счастья?</span></div>
+            </div>
+            <div class="longevity__scheme-aside longevity__scheme-aside--duration">
+              <div class="longevity__scheme-aside-title">Продолжительность счастья</div>
+              <div class="longevity__scheme-aside-arrow">
+                <svg width="8" height="696">
+                  <use xlink:href="./images/sprite.svg#long-arrow"></use>
+                </svg>
+                <svg class="h" width="289" height="4">
+                  <use xlink:href="./images/sprite.svg#long-arrow-h"></use>
+                </svg>
+              </div>
+              <div class="longevity__scheme-aside-text">Застраты времени</div>
+            </div>
+          </div>
+          <div class="longevity__footnote">* по определению Клиники профессора Калинченко.</div>
+        </div>
+      </section>
       <section class="wishmap">
         <div class="wishmap__container container">
           <div class="wishmap__grid">
@@ -746,304 +800,307 @@
                 <use xlink:href="./images/sprite.svg#prev"></use>
               </svg>
             </button>
-            <div class="program-tables__content program-tables__content--active opacity table table--offline" id="table-offline">
-              <div class="table__head">
-                <div class="table__head-group">
-                  <div class="table__head-cell"><span>Программы</span></div>
-                  <div class="table__head-cell"><span>Подробности оплаты</span></div>
-                  <div class="table__head-cell"><span>Цель программы</span></div>
+            <div class="program-tables__content program-tables__content--active opacity" id="table-offline">
+              <div class="table table--offline">
+                <div class="table__head">
+                  <div class="table__head-group">
+                    <div class="table__head-cell" data-order="0"><span>Программы</span></div>
+                    <div class="table__head-cell" data-order="1"><span>Подробности оплаты</span></div>
+                    <div class="table__head-cell" data-order="2"><span>Цель программы</span></div>
+                  </div>
+                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-offline">
+                    <div class="table__head-cell-hint">Offline программы</div>
+                    <div class="table__head-cell-row">
+                      <div class="table__head-cell-part" data-order="3"><span>Количество встреч</span></div>
+                      <div class="table__head-cell-part" data-order="4"><span>Цена,&nbsp;$</span></div>
+                      <div class="table__head-cell-part" data-order="5"><span>Цена для партнера</span></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="table__head-cell table__head-cell--composite table__head-cell--composite-offline">
-                  <div class="table__head-cell-hint">Offline программы</div>
-                  <div class="table__head-cell-row">
-                    <div class="table__head-cell-part"><span>Количество встреч</span></div>
-                    <div class="table__head-cell-part"><span>Цена,&nbsp;$</span></div>
-                    <div class="table__head-cell-part"><span>Цена для партнера</span></div>
+                <div class="table__body swiper"> 
+                  <div class="swiper-wrapper">
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Рекомендации</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Длительность 1 месяц</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: консультации и получение рекомендаций.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>5</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>500</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>425</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Обучение</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: обучение иследованию рекомендациям.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>18</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>798</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>678</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Привычка</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: формирование привычки управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>18</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>756</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>643</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Результат</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>36</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>1190</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>1012</b></span></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="table__body swiper"> 
-                <div class="swiper-wrapper">
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Рекомендации</b></span></div>
-                      <div class="table__cell"><span>Длительность 1 месяц</span></div>
-                      <div class="table__cell"><span>Цель: консультации и получение рекомендаций.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>5</span></div>
-                      <div class="table__cell-part"><span><b>500</b></span></div>
-                      <div class="table__cell-part"><span><b>425</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Обучение</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: обучение иследованию рекомендациям.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>798</b></span></div>
-                      <div class="table__cell-part"><span><b>678</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Привычка</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: формирование привычки управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>756</b></span></div>
-                      <div class="table__cell-part"><span><b>643</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Результат</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
-                      <div class="table__cell"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>36</span></div>
-                      <div class="table__cell-part"><span><b>1190</b></span></div>
-                      <div class="table__cell-part"><span><b>1012</b></span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+              <div class="pagination pagination--white"></div>
             </div>
-            <div class="program-tables__content table table--online" id="table-online">
-              <div class="table__head">
-                <div class="table__head-group">
-                  <div class="table__head-cell"><span>Программы</span></div>
-                  <div class="table__head-cell"><span>Подробности оплаты</span></div>
-                  <div class="table__head-cell"><span>Цель программы</span></div>
+            <div class="program-tables__content" id="table-online">
+              <div class="table table--online">
+                <div class="table__head">
+                  <div class="table__head-group">
+                    <div class="table__head-cell" data-order="0"><span>Программы</span></div>
+                    <div class="table__head-cell" data-order="1"><span>Подробности оплаты</span></div>
+                    <div class="table__head-cell" data-order="2"><span>Цель программы</span></div>
+                  </div>
+                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
+                    <div class="table__head-cell-hint">Online программы</div>
+                    <div class="table__head-cell-row">
+                      <div class="table__head-cell-part" data-order="3"><span>Количество встреч online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="4"><span>Online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="5"><span>Количество встреч online + фитнес</span></div>
+                      <div class="table__head-cell-part" data-order="6"><span>Online с фитнесом</span></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
-                  <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-row">
-                    <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
-                    <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
+                <div class="table__body swiper"> 
+                  <div class="swiper-wrapper">
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Рекомендации</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Длительность 1 месяц</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: консультации и получение рекомендаций.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>5</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>575</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>5</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>575</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Обучение</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: обучение иследованию рекомендациям.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>6</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>393</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>18</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>918</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Привычка</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: формирование привычки управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>6</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>373</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>18</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>869</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Результат</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>10</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>587</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>36</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>1369</b></span></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="table__body swiper"> 
-                <div class="swiper-wrapper">
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Рекомендации</b></span></div>
-                      <div class="table__cell"><span>Длительность 1 месяц</span></div>
-                      <div class="table__cell"><span>Цель: консультации и получение рекомендаций.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>5</span></div>
-                      <div class="table__cell-part"><span><b>575</b></span></div>
-                      <div class="table__cell-part"><span>5</span></div>
-                      <div class="table__cell-part"><span><b>575</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Обучение</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: обучение иследованию рекомендациям.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>393</b></span></div>
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>918</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Привычка</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: формирование привычки управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>373</b></span></div>
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>869</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Результат</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
-                      <div class="table__cell"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>10</span></div>
-                      <div class="table__cell-part"><span><b>587</b></span></div>
-                      <div class="table__cell-part"><span>36</span></div>
-                      <div class="table__cell-part"><span><b>1369</b></span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+              <div class="pagination pagination--white"></div>
             </div>
-            <div class="program-tables__content table table--additional" id="table-additional">
-              <div class="table__head">
-                <div class="table__head-group">
-                  <div class="table__head-cell"><span>Программы</span></div>
-                  <div class="table__head-cell"><span>Подробности оплаты</span></div>
-                  <div class="table__head-cell"><span>Цель программы</span></div>
+            <div class="program-tables__content" id="table-additional">
+              <div class="table table--additional">
+                <div class="table__head">
+                  <div class="table__head-group">
+                    <div class="table__head-cell" data-order="0"><span>Программы</span></div>
+                    <div class="table__head-cell" data-order="1"><span>Подробности оплаты</span></div>
+                    <div class="table__head-cell" data-order="2"><span>Цель программы</span></div>
+                  </div>
+                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
+                    <div class="table__head-cell-hint">Online программы</div>
+                    <div class="table__head-cell-row">
+                      <div class="table__head-cell-part" data-order="3"><span>Количество встреч online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="4"><span>Online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="5"><span>Количество встреч online + фитнес</span></div>
+                      <div class="table__head-cell-part" data-order="6"><span>Online с фитнесом</span></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
-                  <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-row">
-                    <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
-                    <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
+                <div class="table__body swiper"> 
+                  <div class="swiper-wrapper">
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Рекомендации</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Длительность 1 месяц</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: консультации и получение рекомендаций.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>5</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>575</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>5</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>575</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Обучение</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: обучение иследованию рекомендациям.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>6</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>393</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>18</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>918</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Привычка</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: формирование привычки управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>6</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>373</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>18</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>869</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Результат</b></span></div>
+                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
+                        <div class="table__cell" data-order="2"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="3"><span>10</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>587</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span>36</span></div>
+                        <div class="table__cell-part" data-order="6"><span><b>1369</b></span></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="table__body swiper"> 
-                <div class="swiper-wrapper">
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Рекомендации</b></span></div>
-                      <div class="table__cell"><span>Длительность 1 месяц</span></div>
-                      <div class="table__cell"><span>Цель: консультации и получение рекомендаций.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>5</span></div>
-                      <div class="table__cell-part"><span><b>575</b></span></div>
-                      <div class="table__cell-part"><span>5</span></div>
-                      <div class="table__cell-part"><span><b>575</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Обучение</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: обучение иследованию рекомендациям.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>393</b></span></div>
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>918</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Привычка</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
-                      <div class="table__cell"><span>Цель: формирование привычки управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>373</b></span></div>
-                      <div class="table__cell-part"><span>18</span></div>
-                      <div class="table__cell-part"><span><b>869</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Управление возрастом Результат</b></span></div>
-                      <div class="table__cell"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
-                      <div class="table__cell"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>10</span></div>
-                      <div class="table__cell-part"><span><b>587</b></span></div>
-                      <div class="table__cell-part"><span>36</span></div>
-                      <div class="table__cell-part"><span><b>1369</b></span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+              <div class="pagination pagination--white"></div>
             </div>
-            <div class="program-tables__content table table--payment" id="table-payment">
-              <div class="table__head">
-                <div class="table__head-group">
-                  <div class="table__head-cell"><span>Программы</span></div>
-                  <div class="table__head-cell"><span>Подробности оплаты</span></div>
-                  <div class="table__head-cell"><span>Содержание</span></div>
-                </div>
-                <div class="table__head-cell table__head-cell--composite table__head-cell--composite-offline">
-                  <div class="table__head-cell-hint">Offline программы</div>
-                  <div class="table__head-cell-row">
-                    <div class="table__head-cell-part"><span>Количество встреч</span></div>
-                    <div class="table__head-cell-part"><span>Цена,&nbsp;$</span></div>
-                    <div class="table__head-cell-part"><span>Цена для партнера</span></div>
+            <div class="program-tables__content" id="table-payment">
+              <div class="table table--payment">
+                <div class="table__head">
+                  <div class="table__head-group">
+                    <div class="table__head-cell" data-order="0"><span>Программы</span></div>
+                    <div class="table__head-cell" data-order="1"><span>Подробности оплаты</span></div>
+                    <div class="table__head-cell" data-order="2"><span>Содержание</span></div>
+                  </div>
+                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-offline">
+                    <div class="table__head-cell-hint">Offline программы</div>
+                    <div class="table__head-cell-row">
+                      <div class="table__head-cell-part" data-order="3"><span>Количество встреч</span></div>
+                      <div class="table__head-cell-part" data-order="4"><span>Цена,&nbsp;$</span></div>
+                      <div class="table__head-cell-part" data-order="5"><span>Цена для партнера</span></div>
+                    </div>
+                  </div>
+                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
+                    <div class="table__head-cell-hint">Online программы</div>
+                    <div class="table__head-cell-row">
+                      <div class="table__head-cell-part" data-order="6"><span>Количество встреч online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="7"><span>Online без фитнеса</span></div>
+                      <div class="table__head-cell-part" data-order="8"><span>Количество встреч online + фитнес</span></div>
+                      <div class="table__head-cell-part" data-order="9"><span>Online с фитнесом</span></div>
+                    </div>
                   </div>
                 </div>
-                <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
-                  <div class="table__head-cell-hint">Online программы</div>
-                  <div class="table__head-cell-row">
-                    <div class="table__head-cell-part"><span>Количество встреч online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Online без фитнеса</span></div>
-                    <div class="table__head-cell-part"><span>Количество встреч online + фитнес</span></div>
-                    <div class="table__head-cell-part"><span>Online с фитнесом</span></div>
+                <div class="table__body swiper"> 
+                  <div class="swiper-wrapper">
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Единовременно за программы  Рекомендации + Обучение </b></span></div>
+                        <div class="table__cell" data-order="1"><span>Длительность 4 месяца, 23 встречи.</span></div>
+                        <div class="table__cell" data-order="2"><span>Обследования, лабораторная и инструментальная диагностика, получение рекомендаций + Сопровождение для обучения управлению возрастом</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>23</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>1233</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>1048</b></span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="6"><span>11</span></div>
+                        <div class="table__cell-part" data-order="7"><span><b>1051</b></span></div>
+                        <div class="table__cell-part" data-order="8"><span>23</span></div>
+                        <div class="table__cell-part" data-order="9"><span><b>1418</b></span></div>
+                      </div>
+                    </div>
+                    <div class="table__row swiper-slide">
+                      <div class="table__group-cells">
+                        <div class="table__cell" data-order="0"><span><b>Помеясчно после прохождения программы Рекомендации</b></span></div>
+                        <div class="table__cell" data-order="1"><span></span></div>
+                        <div class="table__cell" data-order="2"><span>Сопровождение для обучения/формирования привычки/получения результата с помесячной оплатой</span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-offline">
+                        <div class="table__cell-part" data-order="3"><span>6</span></div>
+                        <div class="table__cell-part" data-order="4"><span><b>280</b></span></div>
+                        <div class="table__cell-part" data-order="5"><span><b>238</b></span></div>
+                      </div>
+                      <div class="table__cell table__cell--composite table__cell--composite-online">
+                        <div class="table__cell-part" data-order="6"><span>2</span></div>
+                        <div class="table__cell-part" data-order="7"><span><b>138</b></span></div>
+                        <div class="table__cell-part" data-order="8"><span>6</span></div>
+                        <div class="table__cell-part" data-order="9"><span><b>322</b></span></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="table__body swiper"> 
-                <div class="swiper-wrapper">
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Единовременно за программы  Рекомендации + Обучение </b></span></div>
-                      <div class="table__cell"><span>Длительность 4 месяца, 23 встречи.</span></div>
-                      <div class="table__cell"><span>Обследования, лабораторная и инструментальная диагностика, получение рекомендаций + Сопровождение для обучения управлению возрастом</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>23</span></div>
-                      <div class="table__cell-part"><span><b>1233</b></span></div>
-                      <div class="table__cell-part"><span><b>1048</b></span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>11</span></div>
-                      <div class="table__cell-part"><span><b>1051</b></span></div>
-                      <div class="table__cell-part"><span>23</span></div>
-                      <div class="table__cell-part"><span><b>1418</b></span></div>
-                    </div>
-                  </div>
-                  <div class="table__row swiper-slide">
-                    <div class="table__group-cells">
-                      <div class="table__cell"><span><b>Помеясчно после прохождения программы Рекомендации</b></span></div>
-                      <div class="table__cell"><span></span></div>
-                      <div class="table__cell"><span>Сопровождение для обучения/формирования привычки/получения результата с помесячной оплатой</span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-offline">
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>280</b></span></div>
-                      <div class="table__cell-part"><span><b>238</b></span></div>
-                    </div>
-                    <div class="table__cell table__cell--composite table__cell--composite-online">
-                      <div class="table__cell-part"><span>2</span></div>
-                      <div class="table__cell-part"><span><b>138</b></span></div>
-                      <div class="table__cell-part"><span>6</span></div>
-                      <div class="table__cell-part"><span><b>322</b></span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+              <div class="pagination pagination--white"></div>
             </div>
             <button class="program-tables__next nav-btn--white nav-btn nav-btn--next" type="button" aria-label="next">
               <svg width="16" height="28">
                 <use xlink:href="./images/sprite.svg#next"></use>
               </svg>
             </button>
-            <div class="program-tables__pagination pagination pagination--white">
-              <button class="pagination__dot active" type="button" data-target="1"> <span class="visually-hidden">1</span></button>
-              <button class="pagination__dot" type="button" data-target="1"> <span class="visually-hidden">2</span></button>
-              <button class="pagination__dot" type="button" data-target="1"> <span class="visually-hidden">3</span></button>
-              <button class="pagination__dot" type="button" data-target="1"> <span class="visually-hidden">4</span></button>
-            </div>
+            <div class="program-tables__pagination pagination pagination--white"></div>
           </div>
         </div>
       </section>

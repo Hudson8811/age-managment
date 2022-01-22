@@ -119,8 +119,6 @@ window.addEventListener('load', () => {
         prevEl: certificatesSliderElement.parentElement.querySelector('.nav-btn--prev'),
       }
     });
-
-    console.log(certificatesSlider)
   }
 
   if (coachingProgramsSliderElement) {

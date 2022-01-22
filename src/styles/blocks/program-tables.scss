@@ -1,6 +1,11 @@
 .program-tables {
   position: relative;
   padding: 58px 0 225px;
+  overflow: hidden;
+
+  @include max(lg) {
+    padding-bottom: 140px;
+  }
 
   &::after {
     content: "";
@@ -31,6 +36,10 @@
   &__main {
     position: relative;
     padding: 0 80px;
+
+    @include max(lg) {
+      padding: 0;
+    }
   }
 
   &__prev,
@@ -38,6 +47,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    @include max(lg) {
+      display: none;
+    }
   }
 
   &__prev {
@@ -52,6 +65,10 @@
     left: 50%;
     bottom: -85px;
     transform: translateX(-50%);
+
+    @include max(lg) {
+      display: none;
+    }
   }
 
   &__content {
@@ -70,6 +87,11 @@
       //transform: translateX(0);
       pointer-events: auto;
       margin: 0 auto;
+
+      .pagination {
+        position: static;
+        margin-top: 32px;
+      }
     }
 
     &.opacity {
