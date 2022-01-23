@@ -7,6 +7,10 @@
     padding-bottom: 140px;
   }
 
+  @include max(xs) {
+    padding: 18px 0 140px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -14,12 +18,33 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    //height: 660px;
-    padding-top: 39.2857%;
+    height: 760px; //660px;
+    //padding-top: 39.2857%;
     pointer-events: none;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    //background-size: 100% auto;
+    background-position: 50% 0;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1680' height='659' viewBox='0 0 1680 659' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m-27 548 1716-27.106V14L-27 47.89V548Z' fill='%2340201A'/%3e%3cpath opacity='.66' d='M1716 640-26.502 615.891-34 0l1750 54.037V640Z' fill='%2340201A'/%3e%3cpath opacity='.66' d='m-27 659 1802-107.547L1740.99 0-27 47.738V659Z' fill='%2340201A'/%3e%3cpath opacity='.66' d='m-27 536.721 1716 32.28v-327L-27 285.864v250.857Z' fill='%2340201A'/%3e%3cpath opacity='.66' d='M-11.5 570.284 1689 595V267L-27 310.997l15.5 259.287Z' fill='%2340201A'/%3e%3c/svg%3e");
+
+    background-size: 1920px auto;
+
+    @include min(1920) {
+      background-size: 100% auto;
+    }
+
+    @include max(1680) {
+      height: 660px;
+      background-size: 1680px auto;
+    }
+
+    @include max(md) {
+      height: 430px;
+      background-size: 1080px auto;
+    }
+
+    @include max(sm) {
+      //background-size: 100% auto;
+    }
   }
 
   &__container {
@@ -27,10 +52,22 @@
 
   &__title {
     margin-bottom: 37px;
+
+    @include max(xs) {
+      margin-bottom: 29px;
+    }
   }
 
   &__tabs {
-    margin-bottom: 34px;
+    margin-bottom: 37px;
+
+    @include max(xs) {
+      margin-bottom: 23px;
+    }
+
+    .tabs__item {
+      font-size: 12px;
+    }
   }
 
   &__main {
@@ -82,16 +119,21 @@
     //width: calc(100% - 160px);
     width: 100%;
 
+    .pagination {
+      display: none;
+
+      @include max(lg) {
+        display: flex;
+        position: static;
+        margin-top: 32px;
+      }
+    }
+
     &--active {
       position: static;
       //transform: translateX(0);
       pointer-events: auto;
       margin: 0 auto;
-
-      .pagination {
-        position: static;
-        margin-top: 32px;
-      }
     }
 
     &.opacity {

@@ -1,5 +1,5 @@
 .certificates {
-  padding: 87px 0 140px;
+  padding: 0 0 12px;
 
   @include max(sm) {
   }
@@ -10,6 +10,10 @@
   &__title {
     @include max(sm) {
       margin-bottom: 24px;
+    }
+
+    @include max(xs) {
+      margin-bottom: 0;
     }
   }
 

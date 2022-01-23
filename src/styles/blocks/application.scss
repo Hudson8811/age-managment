@@ -1,12 +1,13 @@
 .application {
-  padding: 140px 0 72px;
+  padding: 80px 0 133px;
 
   @include max(lg) {
     overflow: hidden;
   }
 
   @include max(sm) {
-    padding-top: 90px;
+    padding-top: 97px;
+    padding-bottom: 66px;
   }
 
   &__container {
@@ -30,7 +31,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-45%) translateX(-49%);
       z-index: -1;
       pointer-events: none;
       width: 894px;

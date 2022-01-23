@@ -1,13 +1,17 @@
 .program-cards {
   position: relative;
   z-index: 1;
-  padding: 28px 0 70px;
+  padding: 28px 0 0;
 
   @include max(sm) {
-    padding: 42px 0 70px;
+    padding: 42px 0 0;
   }
 
   &__container {
+  }
+
+  &__title {
+    margin-bottom: 21px;
   }
 
   &__tabs {
@@ -54,9 +58,9 @@
 }
 
 .program-cards + .program-detail {
-  margin-top: -295px;
+  margin-top: -523px;
 
   @include max(xs) {
-    margin-top: -310px;
+    margin-top: -240px;
   }
 }

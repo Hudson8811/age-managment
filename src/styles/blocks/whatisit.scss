@@ -2,7 +2,7 @@
   padding: 74px 0 60px;
 
   @include max(sm) {
-    padding: 38px 0 60px;
+    padding: 38px 0 70px;
   }
 
   &__container {
@@ -215,7 +215,7 @@
       }
 
       @include max(xs) {
-        margin-bottom: 24px;
+        margin-bottom: 37px;
         font-size: 14px;
         line-height: 1.219285714285714;
         font-weight: 300;

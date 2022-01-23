@@ -202,7 +202,7 @@
       margin-bottom: 0;
     }
 
-    @include max(sm) {
+    @include max(xs) {
       flex-direction: column;
       width: 100%;
       margin-top: 32px;
@@ -212,6 +212,7 @@
       @include max(xs) {
         align-self: center;
       }
+
       img {
       }
     }
@@ -236,14 +237,14 @@
     }
 
     @include max(sm) {
-      margin-top: 32px !important;
-      order: -1;
     }
 
     @include max(xs) {
       width: calc(100% + 30px);
+      margin-top: 32px !important;
       margin-left: -15px !important;
       margin-right: -15px !important;
+      order: -1;
     }
   }
 

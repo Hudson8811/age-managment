@@ -17,11 +17,14 @@
     width: 15px;
     height: 15px;
     margin: 2px 5px;
+    padding: 0;
     border-radius: 50%;
+    border: none;
     opacity: 1;
 
     background-color: rgba($brown, 0.3);
     transition: background-color $transition;
+    appearance: none;
 
     @include max(xs) {
       width: 11px;

@@ -16,18 +16,34 @@
     left: 0;
     width: 100%;
     height: 51%;
-    background-size: 100% auto;
+    background-size: 1920px auto;
     background-color: $white;
     background-repeat: no-repeat;
+
+    @include min(1920) {
+      background-size: 100% auto;
+    }
+
+    @include max(1680) {
+      background-size: 1680px auto;
+    }
+
+    @include max(md) {
+      background-size: 1080px auto;
+    }
+
+    @include max(sm) {
+      background-size: 100% auto;
+    }
   }
 
   &::before {
     top: 0;
-    background-position: 0 0;
+    background-position: 50% 0;
     background-image: linear-gradient(to top, $blue-11 80%, transparent 80%),
       url("data:image/svg+xml;charset=UTF-8,%3csvg width='1680' height='1719' viewBox='0 0 1680 1719' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='.52' d='M-24 24.845 1717.89 0 1730 396 .73 391.437-24 24.845Z' fill='%23112F59'/%3e%3cpath d='M-70.993 10.771 1703 35.002V1647.93L-87 1685-70.993 10.772Z' fill='%23112F59'/%3e%3cpath opacity='.52' d='m-12 1147 1715 34.46-14.5 537.54H.696L-12 1147Z' fill='%23112F59'/%3e%3cpath d='M-70.993 10.771 1703 35.002V1647.93L-87 1685-70.993 10.772Z' fill='%23112F59'/%3e%3c/svg%3e");
 
-    @include max(md) {
+    @include max(sm) {
       background-image: linear-gradient(to top, $blue-11 80%, transparent 80%),
         url("data:image/svg+xml;charset=UTF-8,%3csvg width='320' height='1163' viewBox='0 0 320 1163' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='.91' d='m1045 963.898-1860 30.329-24-243.885L921 574.458l124 389.44Z' fill='%23E6B77D'/%3e%3cpath opacity='.52' d='M-774 13.848 967.889 0 980 220.715l-1729.271-2.543L-774 13.848ZM-762 794.198l1715 22.218L938.5 1163H-749.304L-762 794.198Z' fill='%23112F59'/%3e%3cpath d='M-820.993 23.58 953 40.003V1133.16l-1790 25.12 16.007-1134.7Z' fill='%23112F59'/%3e%3c/svg%3e");
     }
@@ -35,11 +51,11 @@
 
   &::after {
     bottom: 0;
-    background-position: left 0 bottom 0;
+    background-position: left 50% bottom 0;
     background-image: linear-gradient(to bottom, $blue-11 80%, transparent 80%),
       url("data:image/svg+xml;charset=UTF-8,%3csvg width='1680' height='1719' viewBox='0 0 1680 1719' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='.52' d='M-24 24.845 1717.89 0 1730 396 .73 391.437-24 24.845Z' fill='%23112F59'/%3e%3cpath d='M-70.993 10.771 1703 35.002V1647.93L-87 1685-70.993 10.772Z' fill='%23112F59'/%3e%3cpath opacity='.52' d='m-12 1147 1715 34.46-14.5 537.54H.696L-12 1147Z' fill='%23112F59'/%3e%3cpath d='M-70.993 10.771 1703 35.002V1647.93L-87 1685-70.993 10.772Z' fill='%23112F59'/%3e%3c/svg%3e");
 
-    @include max(md) {
+    @include max(sm) {
       background-image: linear-gradient(
           to bottom,
           $blue-11 80%,

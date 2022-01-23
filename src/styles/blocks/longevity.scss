@@ -1,6 +1,10 @@
 .longevity {
   padding: 20px 0 49px;
 
+  @include max(xs) {
+    padding-bottom: 63px;
+  }
+
   &__container {
   }
 
