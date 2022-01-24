@@ -15,12 +15,15 @@
   }
 
   &__tabs {
+    width: calc(100% + 16px);
+    margin-left: -8px;
     margin-top: -10px;
     margin-bottom: 34px;
 
     @include max(sm) {
       width: calc(100% + 15px);
       margin-top: 0;
+      margin-left: 0;
       margin-bottom: 24px;
     }
   }

@@ -9,5 +9,9 @@ section.steps
             h3.steps__slider-step-title!= item.title
             .steps__slider-step-text!= item.text 
             span.steps__slider-step-border
-    .steps__image
-      img(src="images/steps-img.png", srcset="images/steps-img@2x.png 2x", width="574", height="682", alt="Яхницкий Георгий Георгевич")
+    .steps__aside
+      .swiper 
+        .swiper-wrapper
+          each height, index in ['583', '682', '683']
+            .swiper-slide
+              img(src="images/steps-img-" + (index + 1) + ".png", srcset="images/steps-img-" + (index + 1) + "@2x.png 2x", width="574", height= height, alt="Яхницкий Георгий Георгевич")

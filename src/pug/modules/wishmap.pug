@@ -25,14 +25,23 @@ section.wishmap
           - const actClass = index === 0 ? ' active' : '';
           div(class="wishmap__scheme-item wishmap__scheme-item--" + item.mod + actClass + " wishmap-result-item")
             .wishmap-result-item__icon
-              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              if item.isIconInclude 
+                if index === 0
+                  include ../../sprite/whishmapresult/wmr-1.svg
+                if index === 1
+                  include ../../sprite/whishmapresult/wmr-2.svg
+              else
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
             .wishmap-result-item__text!= item.text
     
     .wishmap__list.swiper 
       .swiper-wrapper 
-        each item in WISHMAP_ITEMS
+        each item, index in WISHMAP_ITEMS
           .wishmap__list-item.wishmap-item.swiper-slide
             .wishmap-item__icon
-              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              if index === 6
+                  include ../../sprite/whishmap/wm-7.svg
+              else
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
             .wishmap-item__title!= item.title
             .wishmap-item__text!= item.text

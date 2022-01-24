@@ -5,8 +5,13 @@ section.cost
 
     .cost__slider.swiper 
       .swiper-wrapper
-        each item in COST_CARDS
+        each item, index in COST_CARDS
           .cost__card.cost-card.swiper-slide
             .cost-card__icon
-              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              if index === 0
+                include ../../sprite/cost/cost-1.svg
+              if index === 1
+                include ../../sprite/cost/cost-2.svg
+              if index > 1
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
             .cost-card__text!= item.text

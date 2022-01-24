@@ -35,8 +35,8 @@
   ];
 
   const WISHMAP_RESULT_ITEMS = [
-    {icon: {id: 'wmr-1', w: '54', h: '43'}, text: 'Компенсируете гормональные нарушения', mod: 'one'},
-    {icon: {id: 'wmr-2', w: '44', h: '44'}, text: 'Станете бодрее, сильнее, спокойнее, работоспособнее', mod: 'two'},
+    {icon: null, text: 'Компенсируете гормональные нарушения', mod: 'one', isIconInclude: true},
+    {icon: null, text: 'Станете бодрее, сильнее, спокойнее, работоспособнее', mod: 'two', isIconInclude: true},
     {icon: {id: 'wmr-3', w: '43', h: '43'}, text: 'Получите подходящую диету и научитесь правильному питанию', mod: 'three'},
     {icon: {id: 'wmr-4', w: '56', h: '44'}, text: 'Получите сопровождение с&nbsp;фитнес клубе и научитесь фитнесу', mod: 'four'},
     {icon: {id: 'wmr-5', w: '43', h: '43'}, text: 'Сформируете привычку к счастливой жизни', mod: 'five'},
@@ -139,7 +139,8 @@
     {text: 'Управление возрастом Offline', target: 'table-offline'},
     {text: 'Управление возрастом Online', target: 'table-online'},
     {text: 'Дополнительные обследования, анализы', target: 'table-additional'},
-    {text: 'Варианты оплаты', target: 'table-payment'}
+    {text: 'Варианты оплаты Online', target: 'table-payment-online'},
+    {text: 'Варианты оплаты для Offline', target: 'table-payment-offline'}
   ];
 
   const PROGRAM_TABLES_HEAD_OFFLINE = {
@@ -158,14 +159,19 @@
     }]
   };
 
-  const PROGRAM_TABLES_HEAD_PAYMENT = {
+  const PROGRAM_TABLES_HEAD_PAYMENT_ONLINE = {
+    simple: ['Программы', 'Подробности оплаты', 'Содержание'],
+    composite: [{
+      title: 'Online программы',
+      list: ['Количество встреч online без фитнеса', 'Online без фитнеса', 'Количество встреч online + фитнес', 'Online с фитнесом']
+    }]
+  };
+
+  const PROGRAM_TABLES_HEAD_PAYMENT_OFFLINE = {
     simple: ['Программы', 'Подробности оплаты', 'Содержание'],
     composite: [{
       title: 'Offline программы',
       list: ['Количество встреч', 'Цена,&nbsp;$', 'Цена для партнера']
-    },{
-      title: 'Online программы',
-      list: ['Количество встреч online без фитнеса', 'Online без фитнеса', 'Количество встреч online + фитнес', 'Online с фитнесом']
     }]
   };
 
@@ -183,16 +189,22 @@
     {firstThreeCells: ['<b>Управление возрастом Результат</b>', 'Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч', 'Цель: получение промежуточных результатов управления возрастом.'], groupCells: [['10', '<b>587</b>', '36', '<b>1369</b>']]}
   ];
 
-  const PROGRAM_TABLES_ROWS_PAYMENT = [
-    {firstThreeCells: ['<b>Единовременно за программы  Рекомендации + Обучение </b>', 'Длительность 4 месяца, 23 встречи.', 'Обследования, лабораторная и инструментальная диагностика, получение рекомендаций + Сопровождение для обучения управлению возрастом'], groupCells: [['23', '<b>1233</b>', '<b>1048</b>'], ['11', '<b>1051</b>', '23', '<b>1418</b>']]},
-    {firstThreeCells: ['<b>Помеясчно после прохождения программы Рекомендации</b>', '', 'Сопровождение для обучения/формирования привычки/получения результата с помесячной оплатой'], groupCells: [['6', '<b>280</b>', '<b>238</b>'], ['2', '<b>138</b>', '6', '<b>322</b>']]}
+  const PROGRAM_TABLES_ROWS_PAYMENT_ONLINE = [
+    {firstThreeCells: ['<b>Единовременно за программы  Рекомендации + Обучение </b>', 'Длительность 4 месяца, 23 встречи.', 'Обследования, лабораторная и инструментальная диагностика, получение рекомендаций + Сопровождение для обучения управлению возрастом'], groupCells: [['11', '<b>1051</b>', '23', '<b>1418</b>']]},
+    {firstThreeCells: ['<b>Помеясчно после прохождения программы Рекомендации</b>', '', 'Сопровождение для обучения/формирования привычки/получения результата с помесячной оплатой'], groupCells: [['2', '<b>138</b>', '6', '<b>322</b>']]}
+  ];
+
+  const PROGRAM_TABLES_ROWS_PAYMENT_OFFLINE = [
+    {firstThreeCells: ['<b>Единовременно за программы  Рекомендации + Обучение </b>', 'Длительность 4 месяца, 23 встречи.', 'Обследования, лабораторная и инструментальная диагностика, получение рекомендаций + Сопровождение для обучения управлению возрастом'], groupCells: [['23', '<b>1233</b>', '<b>1048</b>']]},
+    {firstThreeCells: ['<b>Помеясчно после прохождения программы Рекомендации</b>', '', 'Сопровождение для обучения/формирования привычки/получения результата с помесячной оплатой'], groupCells: [['6', '<b>280</b>', '<b>238</b>']]}
   ];
 
   const PROGRAM_TABLES = [
     {id: 'offline', head: PROGRAM_TABLES_HEAD_OFFLINE, rows: PROGRAM_TABLES_ROWS_OFFLINE},
     {id: 'online', head: PROGRAM_TABLES_HEAD_ONLINE, rows: PROGRAM_TABLES_ROWS_ONLINE},
     {id: 'additional', head: PROGRAM_TABLES_HEAD_ONLINE, rows: PROGRAM_TABLES_ROWS_ONLINE},
-    {id: 'payment', head: PROGRAM_TABLES_HEAD_PAYMENT, rows: PROGRAM_TABLES_ROWS_PAYMENT}
+    {id: 'payment-online', head: PROGRAM_TABLES_HEAD_PAYMENT_ONLINE, rows: PROGRAM_TABLES_ROWS_PAYMENT_ONLINE},
+    {id: 'payment-offline', head: PROGRAM_TABLES_HEAD_PAYMENT_OFFLINE, rows: PROGRAM_TABLES_ROWS_PAYMENT_OFFLINE}
   ];
 
   // application section

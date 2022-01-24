@@ -13,6 +13,8 @@ window.addEventListener('load', () => {
 
   const costSliderElement = document.querySelector('.cost__slider.swiper ');
 
+  const stepsSliderElement = document.querySelector('.steps__aside .swiper');
+
 
 
   if (wishmapSliderElement) {
@@ -174,7 +176,6 @@ window.addEventListener('load', () => {
     window.addEventListener('resize', init);
   }
 
-  
   if (costSliderElement) {
     let costSlider = null;
 
@@ -194,6 +195,23 @@ window.addEventListener('load', () => {
 
     init();
     window.addEventListener('resize', init);
+  }
+
+  if (stepsSliderElement) {
+    const wishmapSlider = new Swiper(stepsSliderElement, {
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+   
+    });
   }
 
 });

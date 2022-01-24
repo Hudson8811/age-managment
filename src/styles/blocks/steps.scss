@@ -292,7 +292,7 @@
     }
   }
 
-  &__image {
+  &__aside {
     position: relative;
     z-index: 0;
     display: flex;
@@ -348,11 +348,18 @@
       border-color: rgba($white, 0.05);
     }
 
+    .swiper {
+      align-self: flex-end;
+    }
+
+    .swiper-slide {
+      align-self: flex-end;
+    }
+
     img {
       display: block;
       width: 100%;
       height: auto;
-      align-self: flex-end;
     }
   }
 }

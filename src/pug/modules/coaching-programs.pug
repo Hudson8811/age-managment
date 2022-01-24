@@ -9,7 +9,8 @@ section.coaching-programs
         each item in COACHING_PROGRAMS
           .coaching-programs__program.coaching-program.swiper-slide
             span.coaching-program__icon 
-              +icon('check-round')(width="45", height="45")
+              include ../../sprite/check-round.svg
+              //-+icon('check-round')(width="45", height="45")
             .coaching-program__result!= item.result
             h3.coaching-program__title!= item.title
       .coaching-programs__slider-pagination.pagination.pagination--white

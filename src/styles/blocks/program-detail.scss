@@ -68,10 +68,13 @@
   }
 
   &__tabs {
+    width: calc(100% + 16px);
+    margin-left: -8px;
     margin-bottom: 43px;
 
     @include max(sm) {
       width: calc(100% + 15px);
+      margin-left: 0;
     }
 
     @include max(xs) {

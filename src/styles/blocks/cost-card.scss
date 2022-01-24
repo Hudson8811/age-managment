@@ -9,6 +9,15 @@
     left: 16px;
     top: 18px;
 
+    &:nth-child(1) {
+      width: 43px;
+      height: auto;
+    }
+    &:nth-child(2) {
+      width: 42px;
+      height: auto;
+    }
+
     svg {
       display: block;
     }

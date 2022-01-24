@@ -199,6 +199,7 @@
 
       &-text {
         max-width: 480px;
+        padding-left: 1px;
         font-size: 16px;
         line-height: 1.21875;
         color: $white;
@@ -269,7 +270,7 @@
     height: 573px;
     margin-top: 82px;
     border-radius: 50%;
-    border: solid 1px $white;
+    border: solid 1px rgba($white, 0.33);
 
     @include max(lg) {
       width: 525px;
