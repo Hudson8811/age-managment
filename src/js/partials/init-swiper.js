@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
       // If we need pagination
       pagination: {
         el: '.pagination',
+        clickable: true
       },
 
       // Navigation arrows
@@ -113,6 +114,7 @@ window.addEventListener('load', () => {
       // If we need pagination
       pagination: {
         el: '.pagination',
+        clickable: true
       },
 
       // Navigation arrows
@@ -135,6 +137,7 @@ window.addEventListener('load', () => {
           
           pagination: {
             el: '.pagination',
+            clickable: true
           },
         });
       } else if (html.clientWidth >= 768 && coachingProgramsSlider instanceof Swiper) {
@@ -198,20 +201,24 @@ window.addEventListener('load', () => {
   }
 
   if (stepsSliderElement) {
+    const stepsSliderPagination = document.querySelector('.steps__aside-pagination');
+    const autoplayDelay = 2000;
+
     const stepsSlider = new Swiper(stepsSliderElement, {
       speed: 1000,
       slidesPerView: 1,
       spaceBetween: 0,
       loop: true,
       autoplay: {
-        delay: 2000
+        delay: autoplayDelay
       },
       effect: 'fade',
       fadeEffect: {
         crossFade: true
       },
       pagination: {
-        el: '.steps__aside-pagination'
+        el: stepsSliderPagination,
+        clickable: true
       }
    
     });
@@ -223,6 +230,12 @@ window.addEventListener('load', () => {
     stepsSliderElement.addEventListener('mouseenter', () => {
       stepsSlider.autoplay.stop()
     });
+
+    stepsSliderPagination.onclick = () => {
+      setTimeout(() => {
+              stepsSlider.autoplay.start();
+            }, autoplayDelay)
+    }
   }
 
 });
