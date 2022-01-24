@@ -198,19 +198,30 @@ window.addEventListener('load', () => {
   }
 
   if (stepsSliderElement) {
-    const wishmapSlider = new Swiper(stepsSliderElement, {
+    const stepsSlider = new Swiper(stepsSliderElement, {
       speed: 1000,
       slidesPerView: 1,
       spaceBetween: 0,
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 2000
       },
       effect: 'fade',
       fadeEffect: {
         crossFade: true
       },
+      pagination: {
+        el: '.steps__aside-pagination'
+      }
    
+    });
+
+    stepsSliderElement.addEventListener('mouseleave', () => {
+      stepsSlider.autoplay.start()
+    });
+
+    stepsSliderElement.addEventListener('mouseenter', () => {
+      stepsSlider.autoplay.stop()
     });
   }
 

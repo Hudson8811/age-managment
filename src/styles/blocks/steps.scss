@@ -311,7 +311,7 @@
     }
 
     @include max(md) {
-      margin: 72px auto 0;
+      margin: 72px auto 80px;
     }
 
     @include max(xs) {
@@ -346,6 +346,13 @@
       width: 134.545%;
       height: 134.545%;
       border-color: rgba($white, 0.05);
+    }
+
+    &-pagination {
+      position: absolute;
+      left: 50% !important;
+      bottom: -80px !important;
+      transform: translateX(-50%);
     }
 
     .swiper {
