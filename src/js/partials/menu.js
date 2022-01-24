@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     toggleBtn.onclick = openMenu;
   };
 
-  const closeMenu = () => {
+  const closeMenu = (cb) => {
     header.classList.remove(ModifierClass.HEADER_MENU_OPENED);
     toggleBtn.classList.remove(ModifierClass.OPENED);
 
@@ -47,6 +47,10 @@ window.addEventListener('load', () => {
       headerMenu.classList.remove(ModifierClass.ANIMATE);
       document.body.classList.remove(ModifierClass.BODY_HIDDEN);
       toggleBtn.onclick = openMenu;
+
+      if (cb) {
+        cb()
+      }
     }
   };
 
@@ -57,4 +61,20 @@ window.addEventListener('load', () => {
   });
 
   toggleBtn.onclick = openMenu;
+
+  menuLinks.forEach((link) => {
+    const targetId = link.href.split('#')[1];
+    link.onclick = (e) => {
+      if (html.clientWidth <= MOBILE_BREAKPOINT && targetId) {
+        e.preventDefault();
+
+        closeMenu(() => {
+          document.querySelector(`#${targetId}`).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        });
+      }
+    }
+  })
 });
