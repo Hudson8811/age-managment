@@ -2,10 +2,11 @@ window.addEventListener('load', () => {
   const html = document.documentElement;
 
   const sectionsClasses = ['program-cards', 'program-detail', 'program-tables'];
+  const modClassPostfix = '__content--active';
 
   sectionsClasses.forEach((item) => {
     const sectionClass = item;
-    const modClass = `${sectionClass}__content--active`;
+    const modClass = sectionClass + modClassPostfix;
     const section = document.querySelector(`.${sectionClass}`);
 
     const prevBtn = section.querySelector(`.${sectionClass}__prev`);
@@ -16,16 +17,23 @@ window.addEventListener('load', () => {
       const tabsElement = section.querySelector('.tabs');
       const tabsItems = tabsElement.querySelectorAll('.tabs__item');
 
-      const changeTab = (e, slide) => {
+      const changeTab = (e, slide, sectionEl = section) => {
         const target = e ? e.target.closest('.tabs__item') : null;
 
         const btn = target || slide;
+        const mdClass = sectionEl === section ? modClass : sectionEl.className + modClassPostfix;
+
+        console.log(mdClass)
+        
 
         if (btn) {
           const targetId =  btn.dataset.target;
-          const activeTabsItem = tabsElement.querySelector('.btn--active');
-          const activeTabsContentElement = section.querySelector(`.${modClass}`);
-          const currentTabsContentElement = section.querySelector(`#${targetId}`);
+          const activeTabsItem = sectionEl.querySelector('.tabs__item.btn--active');
+
+
+
+          const activeTabsContentElement = sectionEl.querySelector(`.${mdClass}`);
+          const currentTabsContentElement = sectionEl.querySelector(`#${targetId}`);
 
           activeTabsItem.classList.remove('btn--active');
           btn.classList.add('btn--active');
@@ -36,9 +44,9 @@ window.addEventListener('load', () => {
           activeTabsContentElement.ontransitionend = () => {
             activeTabsContentElement.ontransitionend = null;
             activeTabsContentElement.classList.remove('animate');
-            activeTabsContentElement.classList.remove(modClass);
+            activeTabsContentElement.classList.remove(mdClass);
             
-            currentTabsContentElement.classList.add(modClass);
+            currentTabsContentElement.classList.add(mdClass);
             currentTabsContentElement.classList.add('animate');
             currentTabsContentElement.classList.add('opacity');
           };
@@ -118,6 +126,20 @@ window.addEventListener('load', () => {
 
       init();
       window.addEventListener('resize', init);
+
+      section.onclick = (e) => {
+        const btn = e.target.closest('.program-card__main-btn');
+
+        if (btn) {
+          e.preventDefault();
+          const target = btn.dataset.target;
+          const section = document.querySelector('.program-detail');
+          const items = section.querySelectorAll('.tabs__item');
+          const tabsItem = [...items].filter((tabsItem) => tabsItem.dataset.target === target)[0];
+
+          changeTab(e, tabsItem, section);
+        }
+      }
     }
   });
 });

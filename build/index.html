@@ -23,7 +23,7 @@
           <nav class="header__nav nav">
             <ul class="nav__list"> 
               <li class="nav__item"> <a class="nav__link" href="#whatisit">О коучинге</a></li>
-              <li class="nav__item"> <a class="nav__link" href="#">Программа</a></li>
+              <li class="nav__item"> <a class="nav__link" href="#coaching-programs">Программа</a></li>
               <li class="nav__item"> <a class="nav__link" href="#">Приложение</a></li>
               <li class="nav__item"> <a class="nav__link" href="#certificates">Об авторе</a></li>
             </ul>
@@ -391,7 +391,7 @@
           </div>
         </div>
       </section>
-      <section class="coaching-programs">
+      <section class="coaching-programs" id="coaching-programs">
         <div class="coaching-programs__container container">
           <h2 class="coaching-programs__title title"> <span>Программы коучинга управления возрастом</span></h2>
           <div class="coaching-programs__notice"><strong>Первая консультация</strong> для оценки совместимости консультанта и клиента, ответов на вопросы, выбора варианта сотрудничества <strong>бесплатная</strong></div>
@@ -484,7 +484,7 @@
                     <li class="program-card__main-item">Определите свою цель и получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности</li>
                     <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и сформируете привычку предупреждать болезни, соблюдать правила здорового питания, физической активности и психической деятельности</li>
                     <li class="program-card__main-item">Увидите стойкие признаки улучшения психического здоровья и достигните промежуточной цели</li>
-                  </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
+                  </ul><a class="program-card__main-btn btn" href="#" data-target="program-detail-result">Подробнее</a>
                 </div>
                 <div class="program-card__image">
                   <picture>
@@ -505,7 +505,7 @@
                     <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности, но</li>
                     <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности и</li>
                     <li class="program-card__main-item">Сформируете привычку предупреждать болезни, соблюдать правила здорового питания и физической активности</li>
-                  </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
+                  </ul><a class="program-card__main-btn btn" href="#" data-target="program-detail-habit">Подробнее</a>
                 </div>
                 <div class="program-card__image">
                   <picture>
@@ -525,7 +525,7 @@
                     <li class="program-card__main-item">Определите свою цель</li>
                     <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности, но</li>
                     <li class="program-card__main-item">Научитесь принципам и навыкам контроля здоровья, здорового питания и физической активности.</li>
-                  </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
+                  </ul><a class="program-card__main-btn btn" href="#" data-target="program-detail-learning">Подробнее</a>
                 </div>
                 <div class="program-card__image">
                   <picture>
@@ -544,7 +544,7 @@
                     <li class="program-card__main-item">Изучите показатели своего здоровья</li>
                     <li class="program-card__main-item">Определите свою цель</li>
                     <li class="program-card__main-item">Получите рекомендации по режиму дня и сна, лекарственной терапии возрастных нарушений, компенсации недостатка витаминов и минералов, питанию, физической активности.</li>
-                  </ul><a class="program-card__main-btn btn" href="#">Подробнее</a>
+                  </ul><a class="program-card__main-btn btn" href="#" data-target="program-detail-recommendations">Подробнее</a>
                 </div>
                 <div class="program-card__image">
                   <picture>
@@ -953,75 +953,41 @@
             <div class="program-tables__content" id="table-additional">
               <div class="table table--additional">
                 <div class="table__head">
-                  <div class="table__head-group">
-                    <div class="table__head-cell" data-order="0"><span>Программы</span></div>
-                    <div class="table__head-cell" data-order="1"><span>Подробности оплаты</span></div>
-                    <div class="table__head-cell" data-order="2"><span>Цель программы</span></div>
-                  </div>
-                  <div class="table__head-cell table__head-cell--composite table__head-cell--composite-online">
-                    <div class="table__head-cell-hint">Online программы</div>
-                    <div class="table__head-cell-row">
-                      <div class="table__head-cell-part" data-order="3"><span>Количество встреч online без фитнеса</span></div>
-                      <div class="table__head-cell-part" data-order="4"><span>Online без фитнеса</span></div>
-                      <div class="table__head-cell-part" data-order="5"><span>Количество встреч online + фитнес</span></div>
-                      <div class="table__head-cell-part" data-order="6"><span>Online с фитнесом</span></div>
-                    </div>
-                  </div>
+                  <div class="table__head-cell"><span>Дополнительные обследования, анализы</span></div>
+                  <div class="table__head-cell"><span>Стоимость (примерно, в рублях, разово и за год)</span></div>
                 </div>
-                <div class="table__body swiper"> 
-                  <div class="swiper-wrapper">
-                    <div class="table__row swiper-slide">
-                      <div class="table__group-cells">
-                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Рекомендации</b></span></div>
-                        <div class="table__cell" data-order="1"><span>Длительность 1 месяц</span></div>
-                        <div class="table__cell" data-order="2"><span>Цель: консультации и получение рекомендаций.</span></div>
-                      </div>
-                      <div class="table__cell table__cell--composite table__cell--composite-online">
-                        <div class="table__cell-part" data-order="3"><span>5</span></div>
-                        <div class="table__cell-part" data-order="4"><span><b>575</b></span></div>
-                        <div class="table__cell-part" data-order="5"><span>5</span></div>
-                        <div class="table__cell-part" data-order="6"><span><b>575</b></span></div>
-                      </div>
-                    </div>
-                    <div class="table__row swiper-slide">
-                      <div class="table__group-cells">
-                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Обучение</b></span></div>
-                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации. Длительность 3 месяца, 18 встреч</span></div>
-                        <div class="table__cell" data-order="2"><span>Цель: обучение иследованию рекомендациям.</span></div>
-                      </div>
-                      <div class="table__cell table__cell--composite table__cell--composite-online">
-                        <div class="table__cell-part" data-order="3"><span>6</span></div>
-                        <div class="table__cell-part" data-order="4"><span><b>393</b></span></div>
-                        <div class="table__cell-part" data-order="5"><span>18</span></div>
-                        <div class="table__cell-part" data-order="6"><span><b>918</b></span></div>
-                      </div>
-                    </div>
-                    <div class="table__row swiper-slide">
-                      <div class="table__group-cells">
-                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Привычка</b></span></div>
-                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации и Обучения. Длительность 3 месяца, 18 встреч</span></div>
-                        <div class="table__cell" data-order="2"><span>Цель: формирование привычки управления возрастом.</span></div>
-                      </div>
-                      <div class="table__cell table__cell--composite table__cell--composite-online">
-                        <div class="table__cell-part" data-order="3"><span>6</span></div>
-                        <div class="table__cell-part" data-order="4"><span><b>373</b></span></div>
-                        <div class="table__cell-part" data-order="5"><span>18</span></div>
-                        <div class="table__cell-part" data-order="6"><span><b>869</b></span></div>
-                      </div>
-                    </div>
-                    <div class="table__row swiper-slide">
-                      <div class="table__group-cells">
-                        <div class="table__cell" data-order="0"><span><b>Управление возрастом Результат</b></span></div>
-                        <div class="table__cell" data-order="1"><span>Возможно только после Программы Рекомендации, Обучения и Привычек. Длительность 6 месяцев, 36 встреч</span></div>
-                        <div class="table__cell" data-order="2"><span>Цель: получение промежуточных результатов управления возрастом.</span></div>
-                      </div>
-                      <div class="table__cell table__cell--composite table__cell--composite-online">
-                        <div class="table__cell-part" data-order="3"><span>10</span></div>
-                        <div class="table__cell-part" data-order="4"><span><b>587</b></span></div>
-                        <div class="table__cell-part" data-order="5"><span>36</span></div>
-                        <div class="table__cell-part" data-order="6"><span><b>1369</b></span></div>
-                      </div>
-                    </div>
+                <div class="table__body">
+                  <div class="table__row">
+                    <div class="table__cell"><span>Анализы крови</span></div>
+                    <div class="table__cell"><span><b>250 (1000)</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Биоимпеданс тела</span></div>
+                    <div class="table__cell"><span><b>35 (105)</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Денситометрия</span></div>
+                    <div class="table__cell"><span><b>25 (50)</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Программа питания Гемотест</span></div>
+                    <div class="table__cell"><span><b>600</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Генетический тест Генотек</span></div>
+                    <div class="table__cell"><span><b>840</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Консультация врача</span></div>
+                    <div class="table__cell"><span><b>50 (100)</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>БАД/лекарства</span></div>
+                    <div class="table__cell"><span><b>100-200 (1800)</b></span></div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell"><span>Абонемент в фитнес-клуб</span></div>
+                    <div class="table__cell"><span><b>2500-3000</b></span></div>
                   </div>
                 </div>
               </div>
@@ -1141,9 +1107,11 @@
           <div class="certificates__slider">
             <div class="swiper"> 
               <div class="swiper-wrapper">
-                <div class="certificates__item swiper-slide"> <img src="images/certif-2.jpg" width="405" height="265" alt="Сертификат"></div>
-                <div class="certificates__item swiper-slide"> <img src="images/certif-3.jpg" width="374" height="265" alt="Сертификат"></div>
-                <div class="certificates__item swiper-slide"> <img src="images/certif-1.jpg" width="373" height="265" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/cerf-1.jpg" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/cerf-2.jpg" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/cerf-3.jpg" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/cerf-4.jpg" alt="Сертификат"></div>
+                <div class="certificates__item swiper-slide"> <img src="images/cerf-5.jpg" alt="Сертификат"></div>
               </div>
               <div class="certificates__pagination pagination"></div>
             </div>

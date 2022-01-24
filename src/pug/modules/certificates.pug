@@ -7,7 +7,7 @@ section.certificates#certificates
         .swiper-wrapper
           each item in CERTIFICATES
             .certificates__item.swiper-slide 
-              img(src="images/" + item.name + ".jpg", width= item.w, height= item.h, alt="Сертификат")
+              img(src="images/" + item.name + ".jpg", alt="Сертификат")
         .certificates__pagination.pagination
       .certificates__slider-nav
         +nav-btn('prev', '')

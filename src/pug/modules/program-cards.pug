@@ -18,7 +18,7 @@ section.program-cards#program-cards
                 each li in item.card.list 
                   li.program-card__main-item!= li
               
-              a.program-card__main-btn.btn(href="#") Подробнее
+              a.program-card__main-btn.btn(href="#", data-target= item.card.button) Подробнее
             .program-card__image
               picture
                 source(media="(max-width: 1269px)", srcset="images/" + item.card.image + "-mobile.jpg 1x, images/" + item.card.image + "-mobile@2x.jpg 2x")

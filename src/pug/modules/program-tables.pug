@@ -13,38 +13,52 @@ section.program-tables#program-tables
       
       each table, index in PROGRAM_TABLES
         - let lastCompositeCellIndex = 0;
+        
         .program-tables__content(class= (index === 0 ? 'program-tables__content--active opacity' : ''), id="table-" + table.id)
           .table(class="table--" + table.id)
             .table__head
-              .table__head-group
-                each headSimpleCell, index in table.head.simple
-                  .table__head-cell(data-order= index)
-                    span!= headSimpleCell
+              if table.isSimple
+                each cell in table.head 
+                  .table__head-cell
+                    span!= cell
+              else
+                .table__head-group
+                  each headSimpleCell, index in table.head.simple
+                    .table__head-cell(data-order= index)
+                      span!= headSimpleCell
 
-              each headCompositeCell, compositeIndex in table.head.composite
-                .table__head-cell.table__head-cell--composite(class= (headCompositeCell.list.length > 3 ? 'table__head-cell--composite-online' : 'table__head-cell--composite-offline'))
-                  .table__head-cell-hint!= headCompositeCell.title
-                  .table__head-cell-row
-                    each headCompositeCellPart, ind in headCompositeCell.list
-                      if compositeIndex === 0
-                        - lastCompositeCellIndex = ind
-                      .table__head-cell-part(data-order= (compositeIndex > 0 ? ind + lastCompositeCellIndex + 1 : ind) + table.head.simple.length)
-                        span!= headCompositeCellPart
-            
-            .table__body.swiper 
-              .swiper-wrapper
-                each row in table.rows 
-                  .table__row.swiper-slide
-                    .table__group-cells
-                      each cell, index in row.firstThreeCells
-                        .table__cell(data-order= index)
-                          span!= cell
-
-                    each group, groupIndex in row.groupCells
-                      .table__cell.table__cell--composite(class= (group.length > 3 ? 'table__cell--composite-online' : 'table__cell--composite-offline'))
-                        each cell, ind in group
-                          .table__cell-part(data-order= (groupIndex > 0 ? ind + lastCompositeCellIndex + 1 : ind) + row.firstThreeCells.length)
+                each headCompositeCell, compositeIndex in table.head.composite
+                  .table__head-cell.table__head-cell--composite(class= (headCompositeCell.list.length > 3 ? 'table__head-cell--composite-online' : 'table__head-cell--composite-offline'))
+                    .table__head-cell-hint!= headCompositeCell.title
+                    .table__head-cell-row
+                      each headCompositeCellPart, ind in headCompositeCell.list
+                        if compositeIndex === 0
+                          - lastCompositeCellIndex = ind
+                        .table__head-cell-part(data-order= (compositeIndex > 0 ? ind + lastCompositeCellIndex + 1 : ind) + table.head.simple.length)
+                          span!= headCompositeCellPart
+            if table.isSimple
+              .table__body
+                each rowCells in table.rows
+                  .table__row
+                    .table__cell
+                      span!= rowCells.title
+                    .table__cell
+                      span!= rowCells.price
+            else
+              .table__body.swiper 
+                .swiper-wrapper
+                  each row in table.rows 
+                    .table__row.swiper-slide
+                      .table__group-cells
+                        each cell, index in row.firstThreeCells
+                          .table__cell(data-order= index)
                             span!= cell
+
+                      each group, groupIndex in row.groupCells
+                        .table__cell.table__cell--composite(class= (group.length > 3 ? 'table__cell--composite-online' : 'table__cell--composite-offline'))
+                          each cell, ind in group
+                            .table__cell-part(data-order= (groupIndex > 0 ? ind + lastCompositeCellIndex + 1 : ind) + row.firstThreeCells.length)
+                              span!= cell
           .pagination.pagination--white
       
       +nav-btn('next', 'program-tables__next nav-btn--white')
