@@ -9,11 +9,10 @@ section.wishmap
       .wishmap__slider
         .swiper 
           .swiper-wrapper
-            - let i = 8;
-            while i--
+            each item in WISHMAP_SLIDES
               .wishmap__slider-item.swiper-slide
-                .wishmap__slider-item-title Научитесь определять ранние признаки инсулинорезистентности
-                .wishmap__slider-item-text Выявление инсулинорезистентности может предотвратить развитие сахарного диабета 2го типа. Вы узнаете, на какие показатели крови нужно обращать внимание для раннего выявления проблемы
+                .wishmap__slider-item-title!= item.title
+                .wishmap__slider-item-text!= item.text
           .wishmap__slider-controls
             +nav-btn('prev', 'nav-btn--white')
             .pagination.pagination--white
