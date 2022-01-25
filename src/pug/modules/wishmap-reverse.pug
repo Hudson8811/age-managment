@@ -1,5 +1,7 @@
 section.wishmap.wishmap--reverse
   .wishmap__container.container
+    h2.wishmap__title.title.title--white
+      span Чему я научу
     .wishmap__list.swiper 
       .swiper-wrapper 
         each item, index in WISHMAP_ITEMS_R
@@ -13,7 +15,7 @@ section.wishmap.wishmap--reverse
                 +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
               
             .wishmap-item__title!= item.title
-            .wishmap-item__text!= item.text
+            //-.wishmap-item__text!= item.text
     
     .wishmap__grid
       .wishmap__main

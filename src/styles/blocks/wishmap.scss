@@ -29,9 +29,18 @@
       }
     }
 
+    #{$self}__title {
+      margin-bottom: 20px;
+    }
+
     .wishmap-item__icon {
-      transform-origin: 0 0;
-      transform: scale(1.5);
+      left: 50%;
+      transform-origin: 50% 0;
+      transform: scale(1.5) translateX(-50%);
+    }
+
+    .wishmap-item__title {
+      text-align: center;
     }
   }
 
