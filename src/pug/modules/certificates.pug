@@ -6,7 +6,7 @@ section.certificates#certificates
       .swiper 
         .swiper-wrapper
           each item in CERTIFICATES
-            .certificates__item.swiper-slide 
+            a.certificates__item.swiper-slide(data-fancybox, href="images/" + item.name + ".jpg")
               img(src="images/" + item.name + ".jpg", alt="Сертификат")
         .certificates__pagination.pagination
       .certificates__slider-nav
