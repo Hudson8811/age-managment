@@ -150,6 +150,12 @@
         &.swiper-slide-active,
         &.swiper-slide-active + &.swiper-slide-next:last-child {
           opacity: 1;
+
+          #{$step}-border {
+            &::before {
+              background-color: $white;
+            }
+          }
         }
       }
 

@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
       let slider = null;
 
       const changeStateSlider = () => {
-        if (html.clientWidth < 1270 && !slider) {
+        if (html.clientWidth < 1270 && !slider && sliderElement) {
           slider = new Swiper(sliderElement, {
             speed: 400,
             slidesPerView: 1,
@@ -67,6 +67,7 @@ window.addEventListener('load', () => {
               el: sliderElement.closest('.program-tables__content').querySelector('.pagination'),
             },
           });
+          //console.log(sliderElement.parentElement)
         } else if (html.clientWidth >= 1270 && slider instanceof Swiper) {
           slider.destroy();
           slider = null;
@@ -77,8 +78,6 @@ window.addEventListener('load', () => {
         setHeightOfCells();
         changeStateSlider();
       }
-
-      
 
       window.addEventListener('resize', () => {
         if (html.clientWidth < 1270) {

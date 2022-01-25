@@ -4,7 +4,7 @@
   overflow: hidden;
 
   @include max(xs) {
-    padding: 66px 0 38px;
+    padding: 66px 0 58px;
   }
 
   &::before,
@@ -92,7 +92,7 @@
     }
 
     @include max(xs) {
-      margin-bottom: 24px;
+      margin-bottom: 44px;
     }
   }
 

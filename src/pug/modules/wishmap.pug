@@ -23,7 +23,7 @@ section.wishmap
         .wishmap__scheme-text Что Вы получите в&nbsp;результате?
         each item, index in WISHMAP_RESULT_ITEMS
           - const actClass = index === 0 ? ' active' : '';
-          div(class="wishmap__scheme-item wishmap__scheme-item--" + item.mod + actClass + " wishmap-result-item")
+          button(class="wishmap__scheme-item wishmap__scheme-item--" + item.mod + actClass + " wishmap-result-item", type="button", data-slide= (index + 1))
             .wishmap-result-item__icon
               if item.isIconInclude 
                 if index === 0

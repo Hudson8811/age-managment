@@ -1,5 +1,11 @@
 .wishmap-result-item {
+  display: block;
   width: 191px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
 
   @include max(md) {
     width: 113px;
