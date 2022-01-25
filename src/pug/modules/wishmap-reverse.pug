@@ -1,0 +1,48 @@
+section.wishmap.wishmap--reverse
+  .wishmap__container.container
+    .wishmap__list.swiper 
+      .swiper-wrapper 
+        each item, index in WISHMAP_ITEMS_R
+          .wishmap__list-item.wishmap-item.swiper-slide
+            .wishmap-item__icon
+              if index === 0
+                include ../../sprite/whishmapresult/wmr-1.svg
+              else if index === 1
+                include ../../sprite/whishmapresult/wmr-2.svg
+              else if index > 1
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              
+            .wishmap-item__title!= item.title
+            .wishmap-item__text!= item.text
+    
+    .wishmap__grid
+      .wishmap__main
+        h2.wishmap__main-title.title.title--line.title--line-white 
+          span Карта желаний
+        .wishmap__main-subtitle Чему я научу
+        .wishmap__main-text Преимущество коучинга управления возрастом в том, что Вы сами научитесь и отработаете навыки выявления и коррекции состояний, ускоряющих старение
+      .wishmap__slider
+        .swiper
+          .swiper-wrapper
+            each item in WISHMAP_SLIDES_R
+              .wishmap__slider-item.swiper-slide
+                .wishmap__slider-item-title!= item.title
+                .wishmap__slider-item-text!= item.text
+          .wishmap__slider-controls
+            +nav-btn('prev', 'nav-btn--white')
+            .pagination.pagination--white
+            +nav-btn('next', 'nav-btn--white')
+      
+      .wishmap__scheme
+        .wishmap__scheme-text Что Вы получите в&nbsp;результате?
+        each item, index in WISHMAP_RESULT_ITEMS_R
+          - const actClass = index === 0 ? ' active' : '';
+          button(class="wishmap__scheme-item wishmap__scheme-item--" + item.mod + actClass + " wishmap-result-item", type="button", data-slide= (index + 1))
+            .wishmap-result-item__icon
+              if index === 6
+                  include ../../sprite/whishmap/wm-7.svg
+              else
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+            .wishmap-result-item__text!= item.text
+    
+    
