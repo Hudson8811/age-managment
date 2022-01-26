@@ -2,12 +2,27 @@ window.addEventListener('load', () => {
   const html = document.documentElement;
   const tables = document.querySelectorAll('.table');
 
-  
+  const getScrollbarWidth = () => {
+    const block = document.createElement('div');
+    block.style.width = '50px';
+    block.style.height = '50px';
+    block.style.overflow = 'auto';
 
-    //changeStateSlider();
+    const innerBlock = document.createElement('div');
+    innerBlock.style.height = '200px';
+
+    block.appendChild(innerBlock);
+    document.body.appendChild(block);
+
+    const width = block.offsetWidth - block.clientWidth;
+
+    block.remove();
+    return width;
+  };
 
   if (tables.length) {
     tables.forEach((table) => {
+      let timeoutId = null;
       const sliderElement = table.querySelector('.table__body.swiper');
       const headCells = table.querySelectorAll('.table__head [data-order]');
       const bodyCells = table.querySelectorAll('.table__body [data-order]');
@@ -47,7 +62,7 @@ window.addEventListener('load', () => {
       let slider = null;
 
       const changeStateSlider = () => {
-        if (html.clientWidth < 1270 && !slider && sliderElement) {
+        if (html.clientWidth + getScrollbarWidth() < 1270 && !slider && sliderElement) {
           slider = new Swiper(sliderElement, {
             speed: 400,
             slidesPerView: 1,
@@ -62,27 +77,29 @@ window.addEventListener('load', () => {
                 slidesPerView: 3
               }
             },
-            
             pagination: {
               el: sliderElement.closest('.program-tables__content').querySelector('.pagination'),
             },
           });
           //console.log(sliderElement.parentElement)
-        } else if (html.clientWidth >= 1270 && slider instanceof Swiper) {
+        } else if (html.clientWidth + getScrollbarWidth() >= 1270 && slider instanceof Swiper) {
           slider.destroy();
           slider = null;
         }
       };
 
-      if (html.clientWidth < 1270) {
+      if (html.clientWidth + getScrollbarWidth() < 1270) {
         setHeightOfCells();
         changeStateSlider();
       }
 
       window.addEventListener('resize', () => {
-        if (html.clientWidth < 1270) {
-          removeHeightStyle();
-          setHeightOfCells();
+        if (html.clientWidth + getScrollbarWidth() < 1270) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => {
+            removeHeightStyle();
+            setHeightOfCells();
+          }, 50)
         } else {
           removeHeightStyle();
         }
