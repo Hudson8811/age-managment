@@ -18,6 +18,9 @@
       grid-template-rows: auto auto;
 
       @include max(md) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0;
         margin-top: 100px;
         margin-bottom: 0;
       }
@@ -44,12 +47,17 @@
     #{$self}__main-title {
       max-width: none;
     }
+
     #{$self}__main-subtitle {
       margin: 0;
     }
 
     #{$self}__scheme {
       margin-top: 0;
+
+      @include max(md) {
+        margin-bottom: 110px;
+      }
     }
 
     #{$self}__slider {
@@ -62,10 +70,20 @@
       }
     }
 
+    #{$self}__list {
+      @include max(sm) {
+        width: calc(100% + 15px);
+      }
+    }
+
     .wishmap-item__icon {
       left: 50%;
       transform-origin: 50% 0;
       transform: scale(1.5) translateX(-50%);
+
+      @include max(sm) {
+        transform: scale(1) translateX(-50%);
+      }
     }
 
     .wishmap-item__title {
@@ -170,6 +188,7 @@
     margin-bottom: 53px;
 
     @include max(md) {
+      width: 100%;
       order: -1;
       margin-bottom: 83px;
     }
